@@ -1,5 +1,6 @@
 import React from 'react';
 import badge from '../../assets/img/support_icon.svg';
+import '../../assets/sass/components/Support/_support.scss';
 
 const support = () => {
     return (

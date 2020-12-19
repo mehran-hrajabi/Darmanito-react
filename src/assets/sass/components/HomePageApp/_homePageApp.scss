@@ -1,0 +1,134 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+
+
+/*Download app*/
+.home-app{
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    @include flex(row, initial, center);
+    background-color: $primary-color;
+    > img{
+        position: relative;
+        top: 30px;
+        right: 0;
+    }
+}
+
+
+
+/*App download description and input field*/
+.home-app_body{
+    @include flex(column, initial, initial);
+    margin-top: 120px;
+    > h1, p, button, span{color: white;}
+    >h1{font-size: $main-header;}
+    p{font-size: $text1;}
+    input{
+        width: 500px;
+        height: 65px;
+        padding: 20px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: $text1;
+        margin-bottom: 50px;
+    }
+    button{
+        font-size: $text1;
+        background-color: $secondary-color;
+        width: 100px;
+        height: 45px;
+        margin: 0 -115px 50px 0;
+        border: none;
+        border-radius: 10px;
+        &:hover{opacity: 0.8;}
+    }
+    > div{@include flex(row, center, initial);}
+    a{
+        margin: 10px;
+        &:first-child{margin-right: 0;}
+    }
+}
+
+
+
+/*Download, Bazaar and Sib badges*/
+.home-app_badge{
+    position: relative;
+    span{
+        position: absolute;
+        right: 10%;
+        padding-bottom: 10px;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .home-app > img{width: 40%;}
+    .home-app_body{margin-top: 30px;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-app{
+        width: 100%;
+        @include flex(row, initial, space-between);
+        > img{width: 45%;}
+    }
+    .home-app_body{
+        padding: 0 50px 0 0;
+        margin-top: 30px;
+        h1{font-size: $header3;}
+        p, input, button{font-size: $text3;}
+        input{
+            width:350px;
+            height: 40px;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            margin: 0 -90px 50px 0;
+        }
+        span{
+            font-size: 10px;
+            right:9%;
+        }
+    } 
+    .home-app_badge img{width: 95%;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .home-app{
+        flex-direction: column;
+        > img{
+            margin: auto;
+            width: 70%;
+        }
+    }
+    .home-app_body{
+        width:100%; 
+        margin: auto; 
+        padding-top:25px;
+        >h1, >p{text-align: center;}
+        > h1{font-size: $text1;}
+        > p, input{font-size: $text3;}
+        input{
+            width: 350px;
+            height: 55px;
+            margin-bottom: 10px;
+        }
+        button{width: 85px;
+            height: 35px;
+            margin: 0 -90px 10px 0;
+        }
+        > div{margin: auto;}
+    }
+    .home-app_badge a:first-child, .home-app_badge>span{display: none;}
+}

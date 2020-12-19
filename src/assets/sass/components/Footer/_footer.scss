@@ -1,0 +1,127 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+/*Footer of the page*/
+.footer{
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    @include flex(row, initial, initial);
+    padding: 80px 100px 0 100px;
+}
+
+
+
+@import "../../base/logo";
+/*Right side*/
+.footer_info{
+    @include flex(column, initial, initial);
+    width: 35%;
+    > h3{
+        font-size: $text2;
+        padding-top: 20px;
+    }
+    > p{
+        font-size: $text2;
+    }
+}
+.footer_icons{
+    @include flex(row, initial, initial);
+    padding-top: 20px;
+    a{
+        padding-left: 25px;
+        &:last-child{padding-left: 0;}
+    }
+    i{
+    font-size: 25px;
+    color: #b9b9b9;
+    }
+    /*Their real color codes*/
+    .linkedin:hover{color: #0072b1;}
+    .twitter:hover{color: #00acee;}
+    .instagram:hover{color: #C13584;}
+}
+
+
+
+/*Middle column*/
+.footer_links{
+    @include flex(column, initial, initial);
+    width: 15%;
+    p{
+        color: $black;
+        font-weight: bold;
+        font-size: $text1;
+    }
+    a{
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+}
+
+
+
+/*Left side*/
+.footer_badges{
+    @include flex(column, initial, initial);
+    width: 35%;
+    > p{
+        font-size: $text1;
+        font-weight: bold;
+        color: $black;
+    }
+    > div{@include flex(row, initial, initial);}
+    a{
+        padding: 10px 0 0 10px;
+        &:hover{opacity: 0.7;}
+    }
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .footer_info p{font-size: $text3;}
+    .footer_links{font-size: $text2;}
+    .footer_badges{padding-right: 20px;}
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .footer{
+        padding: 20px 25px;
+        .footer_info{
+            width: 40%;
+            > h3{font-size: $text3;}
+            > p{font-size: $text3;}
+            .footer_icons{
+                padding-top: 0;
+                i{font-size: $text1;}
+            }
+        }
+        .footer_links{
+            width: 20%;
+            p{font-size: $text2;}
+            a{font-size: $text3;}
+        }
+        .footer_badges{
+            width: 20%;
+            p{font-size: $text2;}
+            > div{@include flex(column, initial, center);}
+            img{width: 80%;}
+        }
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .footer{
+        padding-top: 0;
+        margin:auto;
+        .footer_links, .footer_badges{display: none;}
+        .footer_info{width: 100%; margin:auto;}
+        .footer_icons{@include flex(initial, initial, center);}
+    }
+}

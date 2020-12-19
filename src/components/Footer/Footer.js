@@ -2,6 +2,9 @@ import React from 'react';
 import Logo from '../Navbar/Logo';
 import bazaar from '../../assets/img/bazaar_badge.svg';
 import sib from '../../assets/img/sib_badge.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import '../../assets/sass/components/Footer/_footer.scss';
 
 const footer = () => {
     return (
@@ -13,9 +16,9 @@ const footer = () => {
                 <p>تمام حقوق مادی و معنوی این وبسایت متعلق به درمانیتو است.</p>
 
                 <div className="footer_icons">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i className="linkedin"><FontAwesomeIcon icon={faLinkedinIn} /></i></a>
+                    <a href="#"><i className="twitter"><FontAwesomeIcon icon={faTwitter} /></i></a>
+                    <a href="#"><i className="instagram"><FontAwesomeIcon icon={faInstagram} /></i></a>
                 </div>
             </div>
 

@@ -1,0 +1,74 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+
+
+/*Enter phone number and register*/
+.home-register{
+    grid-column: 1 / span 1;
+    grid-row: 6 / span 1;
+    @include flex(row, initial, center);
+    background-color: white;
+    border-radius: 25px;
+    margin:auto;
+    width: 80%;
+    img{
+        width: 45%;
+        padding: 130px 0 0 50px;
+    }
+}
+
+
+
+/*Register content*/
+.home-register_body{
+    @include flex(column, initial, initial);
+    width: 55%;
+    padding: 80px 60px 0 50px;
+    > div{@include flex(row, center, initial);}
+    > h2{
+        font-size: $header3;
+        color: $title-color;
+    }
+    > p{font-size: $text1;}
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .home-register_body{
+        padding: 30px 30px 0 30px;
+        > p{font-size: $text2;}
+    }    
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-register_body{
+        padding : 20px 20px 0 20px;
+        h2{font-size: $text1;}
+        p{font-size: $text3;}
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .home-register{
+        @include flex(column-reverse, center, center);
+        margin-top: 150px;
+        width: 90%;
+        padding:30px;
+        img{
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .home-register_body{
+        width: 100%;
+        padding:0 10px;
+        p{font-size: $text3;}
+        h2{font-size: $text1;}
+    }
+}

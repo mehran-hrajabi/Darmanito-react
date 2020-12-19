@@ -1,0 +1,25 @@
+@import "../lib/var";
+@import url('http://cdn.font-store.ir/yekan.css');
+
+/*Whole page*/
+*{
+    font-family: Yekan;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing : border-box ;
+}
+
+/*Body of the page*/
+body{
+    background-color: white;
+}
+
+/*All links*/
+a{color: black;}
+a:hover{color: $secondary-color;}
+a, a:hover{text-decoration: none;}
+
+/*All headings*/
+h1, h2, h3, h4, h5{font-weight: bold;}
+
+button{cursor: pointer;}

@@ -1,0 +1,104 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+
+
+/*Header of the page*/
+.home-header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    @include flex(row, initial, center);
+}
+
+
+
+/*Header titles*/
+.home-header_appDl{
+    @include flex(column, initial, initial);
+    padding: 200px 100px;
+    > div{@include flex(row, initial, initial);}
+    > h1{
+        color: $secondary-color;
+        font-size: $header1;
+    }
+    >p {font-size: $text1;}
+}
+
+
+
+/*Header buttons*/
+.home-btn_basic{
+    font-weight: bold;
+    font-size: $text1;
+    margin: 30px 0 0 15px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+#home-header_dlBtn{
+    @extend .home-btn_basic;
+    color: white;
+    background-color: $secondary-color;
+    border: none;
+    &:hover{opacity: 0.7;}
+}
+#home-header_membershipBtn{
+    @extend .home-btn_basic;
+    color: $btn-text;
+    background-color: white;
+    border: 1px solid $btn-border;
+    &:hover{background-color: $btn-hover;}
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .home-header img {width: 40%;}
+    .home-btn_basic{margin: 30px 0 0 5px;}
+}
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-header img{width: 40%};
+    .home-header_appDl{
+        padding:80px 20px;
+        h1{font-size: $header3;}
+        p{font-size: $text3;}
+        > div {@include flex(column, initial,initial);}
+    }
+    .home-btn_basic{
+        margin: 10px 0 0 5px;
+        font-size: $text3;
+        width: 110px;
+        height: 35px;
+    }
+}
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .home-header{
+        @include flex(column-reverse, initial, center);
+        margin: auto;
+        img{
+            width: 80%;
+            margin: auto;
+        }
+    }
+    .home-header_appDl{
+        padding: 0 100px 20px 100px;
+        margin: auto;
+        h1{font-size: $main-header; text-align: center;}
+        p{font-size: $text2; text-align: center;}
+        > div{
+            @include flex(column, initial, initial);
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+    .home-btn_basic{margin: 10px 0 0 5px;}
+}

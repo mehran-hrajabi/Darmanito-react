@@ -1,0 +1,147 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+
+
+/*Services*/
+.home-service{
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    @include flex(column, initial, initial);
+    padding: 25px 100px;
+    margin: auto;
+    > h2{
+        font-size: $header3;
+        color: $title-color;
+        margin-right: 30px;
+    }
+}
+
+
+
+/*ّFour items in the right side of the element*/
+.home-service_body{
+    @include flex(row, initial, initial);
+}
+.home-service_items{
+    @include flex(column, initial, initial);
+    width: 40%;
+    > div{@include flex(row, initial, initial);}
+}
+.home-service_items_container{
+    position: relative;
+    margin: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+    img{
+        border-radius: 25px;
+        box-shadow: 0 10px 20px 10px rgb(114, 190, 255, 0.1);
+    }
+    &:hover{opacity: 1;}
+    
+    span {
+        text-align: center;
+        position: absolute;
+        cursor: pointer;
+        color: $title-color;
+        top: 65%;
+        right: 35%;
+    }
+}
+/*Hover exception for one element*/
+#active{opacity: 1;}
+/*Two exceptions for two elements to have a better alignment*/
+#alignment_exception1{right: 25%;}
+#alignment_exception2{right: 20%;}
+
+
+
+/*Description in the left side of the element*/
+.home-service_description{
+    @include flex(column, initial, initial);
+    width: 60%;
+}
+.home-service_txt{
+    > p{font-size: $text1;}
+    >:first-child{font-weight: bold;}
+}
+/*Steps*/
+.home-service_steps{
+    position: relative;
+    .home-step_title{padding-right: 50px;}
+    .home-step_description{padding-right: 100px;}
+}
+#vertical_line{
+    position: absolute;
+    border: 1px solid $black;
+    height: 60%;
+    top: 12%;
+    right: 2.3%;
+}
+#step1, #step2, #step3{
+    position: absolute;
+    right: 0;
+}
+#step1{bottom: 83.5%;}
+#step2{bottom: 52%;}
+#step3{bottom: 20%;}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .home-service_items_container{margin: 5px;}
+    .home-step_description{font-size: $text2;}
+    #vertical_line{right: 3%;}
+    #step1{bottom: 82%;}
+    #step2{bottom: 50%;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-service{
+        margin: auto;
+        width: 100%;
+        padding:0 100px;
+        >h2{text-align: center;}
+    }
+    .home-service_body{@include flex(column, initial,initial);}
+    .home-service_items{
+        width: 100%;
+        > div{@include flex(row, center, center);}
+    }
+    .home-service_items_container{margin: 5px;}
+    .home-service_description{width:100%;}
+    .home-service_txt > p{font-size: $text3;}
+    .home-service_steps{
+        width: 100%;
+        .home-step_description{font-size: $text3;}
+    }
+    #vertical_line{right: 3%;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .home-service{
+        padding: 0;
+        margin: auto;
+        >h2{
+            font-size: $text1;
+            padding-right: 70px;
+        }
+    }
+    .home-service_body{@include flex(column, initial, initial);}
+    .home-service_items{
+        width: 100%;
+        > div{margin: auto;}
+    }
+    .home-service_description{
+        width:100%;
+        margin: auto;
+        padding: 0 100px;
+    }
+    .home-step_description, .home-service_steps > p{font-size: $text3;}
+    .home-step_title{font-size: $text2;}
+    #vertical_line{right: 3.5%;}
+}
