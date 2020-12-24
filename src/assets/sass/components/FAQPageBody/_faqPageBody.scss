@@ -1,0 +1,31 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../base/base";
+
+/*Main body with items and questions*/
+.faq-body{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    @include flex(column, center, initial);
+    margin: 0 50px;
+    h4{
+        font-size: $header3;
+        color: $title-color;
+        padding-right: 50px;
+    }
+}
+
+/*Four items container*/
+.faq-items-container{
+    @include flex(row, initial, initial);
+    padding: 30px;
+    /*Remove badges for the first two items*/
+    > div:nth-child(1){span:first-child{display: none;}}
+    > div:nth-child(2){span:first-child{display: none;}}
+}
+
+.opacityOne {opacity: 1;}
+.opacityBlur{
+    opacity: 0.3;
+    &:hover{opacity: 1;}
+}

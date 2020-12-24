@@ -1,0 +1,19 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../base/base";
+
+.faq-question{
+    @include flex(row, initial, initial);
+    h5{
+        font-size: $text1;
+        color: $title-color;
+        padding-right: 50px;
+    }
+    img{cursor: pointer;}
+}
+
+p{
+    font-size: $text2;
+    padding-right: 100px;
+    margin-top: 0;
+}

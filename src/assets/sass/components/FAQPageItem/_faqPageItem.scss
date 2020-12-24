@@ -1,0 +1,36 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../base/base";
+
+/*FAQ page items container*/
+.faq-item{
+    @include flex(column, initial, center);
+    position: relative;
+    cursor: pointer;
+    padding: 50px;    
+    .faq-item_badge{
+        display:inline-block;
+        border-radius:15px;
+        font-size: $text3;
+        background-color: $label;
+        color: black;
+        text-align: center;
+        position: absolute;
+        top: 15%;
+        right: 37%;
+        width: 65px;
+        height: 25px;
+        margin: auto;
+    }
+    img{
+        border-radius: 25px;
+        box-shadow: 0 10px 20px 10px rgb(114, 190, 255, 0.1);
+    }
+    .faq-item_title {
+        position: absolute;
+        cursor: pointer;
+        color: $title-color;
+        bottom: 25%;
+        right: 38%;
+    }
+}

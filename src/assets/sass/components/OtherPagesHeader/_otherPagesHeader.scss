@@ -1,0 +1,19 @@
+@import "../lib/var";
+@import "../base/base";
+@import "../lib/mixins";
+
+
+.pages-header{
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    @include flex(initial, center, center);
+    background-color: $primary-color;
+    color: white;
+    h1{font-size: $header2;}
+}
+
+
+/*Medium and small devices*/
+@media only screen and (max-width: 992px) {
+    .pages-header{font-size: $header3;}
+}
