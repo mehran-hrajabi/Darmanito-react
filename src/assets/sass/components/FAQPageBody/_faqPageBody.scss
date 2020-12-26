@@ -18,14 +18,40 @@
 /*Four items container*/
 .faq-items-container{
     @include flex(row, initial, initial);
-    padding: 30px;
+    padding: 0 30px;
     /*Remove badges for the first two items*/
     > div:nth-child(1){span:first-child{display: none;}}
     > div:nth-child(2){span:first-child{display: none;}}
+    /*Alignment exception*/
+    > div:nth-child(3){span:last-child{right: 35%;}}
 }
 
 .opacityOne {opacity: 1;}
 .opacityBlur{
     opacity: 0.3;
     &:hover{opacity: 1;}
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .faq-items-container{padding: 10px;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .faq-items-container{
+        padding: 0;
+        > div:nth-child(3){span:last-child{right: 30%;}}
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .faq-body{
+        h4{padding-right: 30px;}
+    }
+    .faq-items-container{
+        padding: 10px;
+        > div:nth-child(3), > div:nth-child(4){display: none;}
+    }
 }

@@ -17,3 +17,13 @@ p{
     padding-right: 100px;
     margin-top: 0;
 }
+
+
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .faq-question{
+        h5{font-size: $text3;}
+        p{font-size: $text3;}
+    }
+}

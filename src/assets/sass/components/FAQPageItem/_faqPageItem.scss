@@ -7,7 +7,7 @@
     @include flex(column, initial, center);
     position: relative;
     cursor: pointer;
-    padding: 50px;    
+    padding: 50px;
     .faq-item_badge{
         display:inline-block;
         border-radius:15px;
@@ -32,5 +32,28 @@
         color: $title-color;
         bottom: 25%;
         right: 38%;
+    }
+}
+
+
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .faq-item{
+        padding: 15px;
+        .faq-item_badge{
+            top: 2%;
+            right: 33%;
+        }
+        .faq-item_title{
+            bottom: 18%;
+            right: 35%;
+        }
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .faq-item{
+        padding: 15px;
     }
 }

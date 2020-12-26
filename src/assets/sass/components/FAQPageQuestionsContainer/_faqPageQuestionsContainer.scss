@@ -1,3 +1,14 @@
 .faq-questions_container{
     margin : 0 50px;
 }
+
+
+
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .faq-questions_container{margin-top: 50px;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .faq-questions_container{margin: 20px 10px;}
+}
