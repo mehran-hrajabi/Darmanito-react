@@ -1,0 +1,13 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../base/base";
+
+.contact-body{@include flex(row, initial, space-between);}
+
+/*Medium and small devices*/
+@media only screen and (max-width: 992px) {
+    .contact-body{
+        @include flex(column-reverse, initial, center);
+        margin: auto;
+    }
+}

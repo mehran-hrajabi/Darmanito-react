@@ -1,0 +1,79 @@
+@import "../../lib/mixins";
+@import "../../lib/var";
+@import "../../base/base";
+
+
+
+.contact-address{
+    @include flex(column, initial, center);
+    margin: 0 0 0 100px;
+    padding-top: 150px;
+}
+
+
+
+iframe{
+    width: 600px;
+    height: 450px;
+    margin: auto;
+}
+
+
+
+p{margin:0;}
+.contact-address_info{
+    @include flex(row, initial, initial);
+    margin: auto;
+    width: 75%;
+    position: relative;
+    bottom: 30%;
+    background-color: white;
+    border-radius: 10px;
+    p{font-size: $text1;}
+}
+.column-basic{
+    @include flex(column, flex-start, initial);
+    width: 50%;
+    padding: 10px;
+}
+.contact-address_rightCol{
+    @extend .column-basic;
+    p:nth-child(2), p:nth-child(4){
+        color: $secondary-color;
+        font-weight: bold;
+    }
+}
+.contact-address_leftCol{
+    @extend .column-basic;
+    p{text-align: right;}
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    iframe{width: 450px;}
+    .contact-address{padding-top: 200px;}
+    .contact-address_info{bottom: 40%;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .contact-address{margin: auto;}
+    .contact-address_info{
+        p{font-size: $text2;}
+        bottom: 150px;
+        width: 70%;
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .contact-address{margin: auto;}
+    iframe{width: 80%;}
+    .contact-address_info{
+        bottom: 150px;
+        width: 55%;
+        p{font-size: $text3;}
+    }
+}
