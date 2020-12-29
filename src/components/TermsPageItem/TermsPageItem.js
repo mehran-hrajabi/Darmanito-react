@@ -4,7 +4,7 @@ import '../../assets/sass/components/TermsPageItem/_termsPageItem.scss';
 
 const termsItem = (props) => {
     return (
-        <div>
+        <div className="terms-item">
             <span>{props.title}</span>
         </div>
     );

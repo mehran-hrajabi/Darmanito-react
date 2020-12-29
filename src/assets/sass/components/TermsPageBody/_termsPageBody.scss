@@ -1,0 +1,32 @@
+@import "../../lib/var";
+@import "../../lib/mixins";
+@import "../../base/base";
+
+
+.terms-body{
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    @include flex(column, initial, center);
+    margin: 0 50px;
+    > h4{
+        font-size: $header3;
+        color: $title-color;
+        padding-right: 120px;
+    }
+}
+
+.terms-items_container{
+    @include flex(row, initial, center);
+    padding: 0;
+}
+
+.terms-toggle{
+    margin: 50px 150px;
+    >p{font-size: $text1;}
+}
+
+.opacityOne {opacity: 1;}
+.opacityBlur{
+    opacity: 0.3;
+    &:hover{opacity: 1;}
+}
