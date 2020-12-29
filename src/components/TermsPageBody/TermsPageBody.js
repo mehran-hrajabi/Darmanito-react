@@ -56,18 +56,24 @@ class TermsBody extends Component {
         return(
             <div className="terms-body">
                 <h4>کاربران باید این توافق نامه را مطالعه و سپس اقدام به عضویت و ... نمایند</h4>
+                
                 <div className="terms-items_container">
-                    <div className={classes[0]} onClick = {() => this.termsToggle(0)}>
-                        <Item title="قوانین عضویت حساب کاربری" />
+                    <div>
+                        <div className={classes[0]} onClick = {() => this.termsToggle(0)}>
+                            <Item title="قوانین عضویت حساب کاربری" />
+                        </div>
+                        <div className={classes[1]} onClick = {() => this.termsToggle(1)}>
+                            <Item title="قوانین داروخانه" />
+                        </div>                        
                     </div>
-                    <div className={classes[1]} onClick = {() => this.termsToggle(1)}>
-                        <Item title="قوانین داروخانه" />
-                    </div>
-                    <div className={classes[2]} onClick = {() => this.termsToggle(2)}>
-                        <Item title="قوانین فروشگاه" />
-                    </div>
-                    <div className={classes[3]} onClick = {() => this.termsToggle(3)}>
-                        <Item title="قوانین مشاوره آنلاین" />
+
+                    <div>
+                        <div className={classes[2]} onClick = {() => this.termsToggle(2)}>
+                            <Item title="قوانین فروشگاه" />
+                        </div>
+                        <div className={classes[3]} onClick = {() => this.termsToggle(3)}>
+                            <Item title="قوانین مشاوره آنلاین" />
+                        </div>                        
                     </div>
                 </div>
 

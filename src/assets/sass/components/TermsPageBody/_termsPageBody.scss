@@ -17,7 +17,7 @@
 
 .terms-items_container{
     @include flex(row, initial, center);
-    padding: 0;
+    > div{@include flex(row, initial, center);}
 }
 
 .terms-toggle{
@@ -29,4 +29,39 @@
 .opacityBlur{
     opacity: 0.3;
     &:hover{opacity: 1;}
+}
+
+
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .terms-body{margin: 0;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .terms-body{
+        margin: 0;
+        > h4{padding-right: 10px;}
+    }
+    .terms-toggle{margin: 50px;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .terms-body{
+        margin: 0;
+        > h4{
+            padding-right: 5px;
+            font-size: $text1;
+            text-align: center;
+        }
+    }
+    .terms-items_container{
+        @include flex(column, initial, center);
+    }
+    .terms-toggle{
+        margin: 50px;
+        >p{font-size: $text3;}
+    }
 }
