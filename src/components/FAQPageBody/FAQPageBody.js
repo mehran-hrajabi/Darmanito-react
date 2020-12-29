@@ -5,6 +5,7 @@ import PharmacyContainer from '../FAQPageQuestionsContainer/FAQPagePharmacyConta
 import ShopContainer from '../FAQPageQuestionsContainer/FAQPageShopContainer';
 
 import '../../assets/sass/components/FAQPageBody/_faqPageBody.scss';
+import '../../assets/sass/base/_itemOpacity.scss';
 
 import Pharmacy from '../../assets/img/pharmacy_icon.svg';
 import Shop from '../../assets/img/shop_icon.svg';

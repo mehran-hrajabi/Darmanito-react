@@ -4,6 +4,7 @@ import Item from '../TermsPageItem/TermsPageItem';
 import Terms from './TermsDescription';
 
 import '../../assets/sass/components/TermsPageBody/_termsPageBody.scss' ;
+import '../../assets/sass/base/_itemOpacity.scss';
 
 class TermsBody extends Component {
 
@@ -56,7 +57,7 @@ class TermsBody extends Component {
         return(
             <div className="terms-body">
                 <h4>کاربران باید این توافق نامه را مطالعه و سپس اقدام به عضویت و ... نمایند</h4>
-                
+
                 <div className="terms-items_container">
                     <div>
                         <div className={classes[0]} onClick = {() => this.termsToggle(0)}>
