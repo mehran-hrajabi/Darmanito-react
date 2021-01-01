@@ -2,66 +2,12 @@
 @import "../../lib/var";
 @import "../../base/base";
 
-.contact-form{
-    @include flex(initial, flex-start, initial);
-    margin: 0 100px 0 50px;
-}
-.contact-form_element{@include flex(column, initial, inline);}
-
+.contact-form{@include flex(initial, flex-start, initial);}
 
 form{margin: auto;}
-.form-basic{
-    margin-bottom: 15px;
-    width: 450px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid $placeholder-color;
-    &:focus{
-        border-color: #80bdff;
-        box-shadow:0 0 0 2px rgba(0,123,255,.25)
-    }
-}
-#name, #email_phone, button{
-    @extend .form-basic;
-    height: 50px;
-}
-#message{
-    @extend .form-basic;
-    height: 150px;
-}
-label{
-    font-size: $text3;
-    padding-bottom: 5px;
-}
-::placeholder{
-    font-size: $text2;
-    color: $placeholder-color;
-    padding: 10px;
-}
-button{
-    background-color: white;
-    color: $secondary-color;
-    font-size: $text1;
-    border: 1px solid $secondary-color;
-    margin-top: 15px;
-    &:hover{
-        background-color: $btn-hover;
-        transition-duration: 0.5s;
-    }
-}
 
 
 
-
-
-/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
-@media only screen and (min-width: 992px) and (max-width: 1200px){
-    .contact-form{margin: 0 50px;}
-}
-/*Medium devices (landscape tablets, 768px-992px)*/
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .contact-form{margin: auto;}
-}
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
     .contact-form{margin: auto;}
