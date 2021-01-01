@@ -4,9 +4,7 @@
 
 
 
-.contact-form_input{
-    @include flex(column, initial, inline);
-}
+.contact-form_input{@include flex(column, initial, inline);}
 .form-basic{
     margin-bottom: 15px;
     width: 450px;
