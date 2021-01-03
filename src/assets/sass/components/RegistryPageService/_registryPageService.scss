@@ -1,0 +1,35 @@
+@import "../../base/base";
+
+.registry-service_body{
+    @include flex(column, center, space-between);
+    margin: 50px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);
+    width: 450px;
+    height: 500px;
+    padding: 30px;
+    h4{
+        color: $title-color;
+        font-size: $header3;
+    }
+    img{
+        margin: auto;
+        width: 140px;
+        height: 160px;
+    }
+    button{
+        border-radius: 10px;
+        color: white;
+        background-color: $secondary-color;
+        font-size: $text1;
+        width: 170px;
+        height: 50px;
+        border: none;
+        outline: none;
+        &:hover{opacity: 0.8;}
+    }
+}
+.registry-service_info{
+    >div{@include flex(row, center, center);}
+}

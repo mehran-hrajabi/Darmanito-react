@@ -1,5 +1,3 @@
-@import "../../lib/mixins";
-@import "../../lib/var";
 @import "../../base/base";
 
 .contact-body{@include flex(row, initial, space-between);}

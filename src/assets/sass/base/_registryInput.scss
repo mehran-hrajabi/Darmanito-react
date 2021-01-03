@@ -1,12 +1,9 @@
-@import "../lib/var";
 @import "../base/base";
 
-
-
-input,button{
+input, button{
     font-size: $text1;
     border-radius: 10px;
-    border: none;
+    border: none;        
 }
 input{
     background-color: $input-color;
@@ -15,15 +12,16 @@ input{
     padding: 20px;
     border-radius: 10px;
     outline: none;        
-    margin-top: 50px;        
+    margin-top: 50px;         
 }
 button{
     background-color: $secondary-color;
     color: white;
     width: 130px;
     height: 45px;
-    margin: 50px -145px 0 0;
-    &:hover{opacity: 0.8;}
+    position: relative;
+    left: 10.5%;
+    &:hover{opacity: 0.8;}        
 }
 
 
@@ -34,6 +32,7 @@ button{
 @media only screen and (min-width: 992px) and (max-width: 1200px){
     input, button{font-size: $text2;}
     input{width: 400px;}
+    button{left: 12.5%;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -45,7 +44,7 @@ button{
     button{
         width: 80px;
         height: 30px;
-        margin: 50px -90px 0 0;
+        left: 10.8%;
     }
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
@@ -56,10 +55,10 @@ button{
         width: 350px;
         height: 55px;
     }
-    button{width: 90px;
+    button{
+        width: 90px;
         height: 35px;
         margin: 0;
-        position: relative;
-        left: 26%;
+        left: 20.5%;
     }
 }

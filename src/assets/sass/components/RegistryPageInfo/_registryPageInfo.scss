@@ -1,0 +1,14 @@
+@import "../../base/base";
+
+.registry-info{
+    @include flex(column, flex-start, initial);
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    margin: 50px 0 50px 0;
+    h1{
+        color: $secondary-color;
+        font-size: $header2;
+    }
+    p{font-size: $text1;}
+    button{left: 22%;}
+}

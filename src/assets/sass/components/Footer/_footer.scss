@@ -1,8 +1,5 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
 
-/*Footer of the page*/
 .footer{
     grid-column: 1 / span 1;
     grid-row: 5 / span 1;
@@ -42,8 +39,6 @@
     .instagram:hover{color: #C13584;}
 }
 
-
-
 /*Middle column*/
 .footer_links{
     @include flex(column, initial, initial);
@@ -58,8 +53,6 @@
         padding-top: 10px;
     }
 }
-
-
 
 /*Left side*/
 .footer_badges{

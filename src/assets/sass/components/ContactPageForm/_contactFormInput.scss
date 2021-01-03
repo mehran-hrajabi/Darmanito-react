@@ -1,8 +1,4 @@
-@import "../../lib/mixins";
-@import "../../lib/var";
 @import "../../base/base";
-
-
 
 .contact-form_input{@include flex(column, initial, inline);}
 .form-basic{

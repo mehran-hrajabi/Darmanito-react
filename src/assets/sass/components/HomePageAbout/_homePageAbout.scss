@@ -1,8 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
-
-
 
 /*About info*/
 .home-about{
@@ -12,8 +8,6 @@
     padding: 0 100px 50px 100px;
     > img{margin-left: 80px;}
 }
-
-
 
 /*Descriptions in left side of the element*/
 .home-about_body{
@@ -32,8 +26,6 @@
         margin: auto;
     }
 }
-
-
 
 /*Icons in the left side of the element*/
 .home-about_items{

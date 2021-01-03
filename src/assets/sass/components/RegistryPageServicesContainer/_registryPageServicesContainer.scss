@@ -1,0 +1,17 @@
+@import "../../base/base";
+
+.registry-services_container{
+    @include flex(column, flex-start, flex-start);
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+    margin: 50px;
+    padding: 50px;
+    > h4{
+        color: $title-color;
+        font-size: $header3;
+        padding-right: 30px;
+    }
+    p{font-size: $text1;}
+    > div{@include flex(row, center, center);}
+    
+}

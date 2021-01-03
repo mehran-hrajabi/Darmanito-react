@@ -1,7 +1,4 @@
-@import "../lib/var";
 @import "../base/base";
-@import "../lib/mixins";
-
 
 .pages-header{
     grid-column: 1 / span 1;
@@ -11,6 +8,7 @@
     color: white;
     h1{font-size: $header2;}
 }
+
 
 
 /*Medium and small devices*/

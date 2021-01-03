@@ -1,8 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
-
-
 
 .terms-item{
     @include flex (initial, center, center);

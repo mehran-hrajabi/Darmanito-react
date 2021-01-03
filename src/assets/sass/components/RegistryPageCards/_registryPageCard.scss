@@ -1,0 +1,70 @@
+@import "../../base/base";
+
+p{margin: 0;}
+h4{margin: 0;}
+
+.registry-card{
+    @include flex(row, center, initial);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);
+    > img{
+        margin-left: 15px;
+    }
+}
+.registry-card_body{
+    @include flex(column, flex-start, initial);
+    > div{@include flex(row, center, initial);}
+}
+
+
+
+.badge-basic{
+    @include flex(row, center, center);
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 10px;
+}
+.big{
+    width: 438px;
+    height: 125px;
+    h4{font-size: $header3;}
+    p{
+        font-size: $text3;
+        padding-right: 5px;
+    }
+    > img{
+        width: 75px;
+        height: 75px;
+    }
+    > span{
+        @extend .badge-basic;
+        font-size: $text3;
+        width: 80px;
+        height: 30px;
+        margin-top: -70px;
+        margin-right: 20px;
+    }
+}
+.small{
+    width: 305px;
+    height: 85px;
+    h4{font-size: $medium;}
+    p{
+        font-size: $small;
+        padding-right: 5px;
+    }
+    > img{
+        width: 50px;
+        height: 50px;
+    }
+    > span{
+        @extend .badge-basic;
+        font-size: $small;
+        width: 55px;
+        height: 20px;
+        margin-top: -50px;
+        margin-right: 2px;
+    }
+}
+.blur{opacity: 0.7;}

@@ -1,8 +1,4 @@
-@import "../../lib/mixins";
-@import "../../lib/var";
 @import "../../base/base";
-
-
 
 .contact-address{
     @include flex(column, initial, center);

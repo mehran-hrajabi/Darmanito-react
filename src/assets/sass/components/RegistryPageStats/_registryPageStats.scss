@@ -1,0 +1,17 @@
+@import "../../base/base";
+
+h1, p{margin: 0;}
+.registry-stats{
+    @include flex(row, center, space-between);
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    background-color: $primary-color;
+    color: white;
+    > div{
+        @include flex(column, center, center);
+        &:first-child{margin-right: 100px;}
+        &:last-child{margin-left: 100px;}
+    }
+    p{font-size: $text1;}
+    h1{font-size: $header1;}
+}

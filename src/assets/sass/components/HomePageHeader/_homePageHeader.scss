@@ -1,8 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
-
-
 
 /*Header of the page*/
 .home-header{
@@ -10,8 +6,6 @@
     grid-row: 2 / span 1;
     @include flex(row, initial, center);
 }
-
-
 
 /*Header titles*/
 .home-header_appDl{
@@ -24,8 +18,6 @@
     }
     >p {font-size: $text1;}
 }
-
-
 
 /*Header buttons*/
 .home-btn_basic{

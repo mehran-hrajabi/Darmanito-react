@@ -1,8 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
-
-
 
 /*Navigation bar*/
 .main-nav{
@@ -12,11 +8,7 @@
     margin-right: 100px;
 }
 
-
-
 @import "../../base/logo";
-
-
 
 /*Navigation bar links*/
 .main-nav_menu{
@@ -28,8 +20,6 @@
         &:last-child{margin-left: 0;}
     }
     }
-
-
 
 /*Button in the left side of the navigation bar*/
 .main-nav_btn{

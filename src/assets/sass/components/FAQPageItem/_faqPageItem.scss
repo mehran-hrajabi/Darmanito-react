@@ -1,8 +1,5 @@
-@import "../../lib/mixins";
-@import "../../lib/var";
 @import "../../base/base";
 
-/*FAQ page items container*/
 .faq-item{
     @include flex(column, initial, center);
     position: relative;

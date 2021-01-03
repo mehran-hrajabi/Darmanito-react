@@ -1,8 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
 @import "../../base/base";
-
-
 
 /*Download app*/
 .home-app{
@@ -16,8 +12,6 @@
         right: 0;
     }
 }
-
-
 
 /*App download description and input field*/
 .home-app_body{
@@ -52,8 +46,6 @@
         &:first-child{margin-right: 0;}
     }
 }
-
-
 
 /*Download, Bazaar and Sib badges*/
 .home-app_badge{
