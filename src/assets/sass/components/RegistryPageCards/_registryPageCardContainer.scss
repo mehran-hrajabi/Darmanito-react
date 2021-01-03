@@ -2,6 +2,7 @@
 
 .registry-card_container{
     @include flex(column, center, center);
+    width: 40%;
     > div:nth-child(1){
         margin: 20px 0;
     }
@@ -10,5 +11,23 @@
     }
     > div:nth-child(3){
         margin: 20px 250px 20px 0;
+    }
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .registry-card_container{width: 45%;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .registry-card_container{width: 100%;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .registry-card_container{
+        width: 100%;
+        > div:nth-child(2), > div:nth-child(3){display: none;}
     }
 }

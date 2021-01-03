@@ -12,6 +12,38 @@
         padding-right: 30px;
     }
     p{font-size: $text1;}
-    > div{@include flex(row, center, center);}
+    > div{
+        @include flex(row, center, center);
+        margin: auto;
+    }
     
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .registry-services_container{
+        margin:20px;
+        padding: 30px;
+    }
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .registry-services_container{
+        margin:0;
+        padding: 20px;
+        > h4{font-size: $text1;}
+        p{font-size: $text2;}
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .registry-services_container{
+        margin:0;
+        padding: 10px;
+        > h4{font-size: $text1;}
+        p{font-size: $text3;}
+        > div{@include flex(column, center, center);}
+    }
 }

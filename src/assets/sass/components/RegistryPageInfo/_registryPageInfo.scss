@@ -5,10 +5,54 @@
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     margin: 50px 0 50px 0;
+    width: 60%;
     h1{
         color: $secondary-color;
         font-size: $header2;
     }
     p{font-size: $text1;}
-    button{left: 22%;}
+    button{
+        margin-right: -80px;
+    }
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .registry-info{
+        width: 55%;
+        button{margin-right: -80px;}
+    }
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .registry-info{
+        width: 100%;
+        h1{font-size: $header3;}
+        p{font-size: $text2;}
+        button{margin-right: -50px;}
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .registry-info{
+        width: 100%;
+        padding: 0 30px;
+        h1{font-size: $header3;}
+        p{font-size: $text2;}
+        input{
+            font-size: $text2;
+            width: 350px;
+            height: 55px;
+            padding: 15px;
+        }
+        button{
+            margin-right: -100px;
+            left: 0;
+            font-size: $text3;
+            width: 90px;
+            height: 40px;
+        }
+    }
 }
