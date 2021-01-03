@@ -1,6 +1,6 @@
 import React from 'react';
 import doctor from '../../assets/img/register.svg';
-import RegistryInput from './RegisteryInput';
+import RegistryInput from './RegistryInput';
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
 import '../../assets/sass/base/_registryInput.scss';
 

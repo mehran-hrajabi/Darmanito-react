@@ -13,7 +13,13 @@ class ContactForm extends Component {
                     placeholder: "نام و نام خانوادگی خود را وارد کنید"
                 },
                 value: "",
-                label: "نام و نام خانوادگی"
+                label: "نام و نام خانوادگی",
+                validationRules: {
+                    required: true,
+                    minLength: 3,
+                    maxLength: 20
+                },
+                valid: false
             },
 
             emailPhone: {
@@ -23,7 +29,13 @@ class ContactForm extends Component {
                     placeholder: "ایمیل یا شماره همراه خود را وارد کنید"
                 },
                 value: "",
-                label: "ایمیل یا شماره همراه"
+                label: "ایمیل یا شماره همراه",
+                validationRules: {
+                    required: true,
+                    minLength: 7,
+                    maxLength: 30
+                },
+                valid: false
             },
 
             message: {
@@ -32,9 +44,31 @@ class ContactForm extends Component {
                     placeholder: "پیام خود را بنویسید"
                 },
                 value: "",
-                label: "پیام شما"
+                label: "پیام شما",
+                validationRules: {
+                    required: true,
+                    minLength: 10,
+                    maxLength: 150
+                },
+                valid: false
             }
         }            
+    }
+
+    formValidation = (value, rules) => {
+        let isValid = false;
+
+        if(rules.required){
+            isValid = value.trim() !== '' && isValid ;
+        }
+
+        if(rules.minLength){
+            isValid = value.length >= rules.minLength && isValid;
+        }
+
+        if(rules.maxLength){
+            isValid = value.length <= rules.maxLength && isValid;
+        }
     }
 
     inputChangedHandler = (event, inputID) => {
@@ -45,6 +79,7 @@ class ContactForm extends Component {
             ...updatedForm[inputID]
         };
         updatedElement.value = event.target.value;
+        updatedElement.valid = this.formValidation(updatedElement.value, updatedElement.validationRules);
         updatedForm[inputID] = updatedElement;
         this.setState({contactForm: updatedForm});
     }

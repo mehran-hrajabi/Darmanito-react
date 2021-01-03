@@ -8,7 +8,7 @@ const faqItem = (props) => {
             <img src = {props.img} />
             <span className="faq-item_title">{props.title}</span>
         </div>
-    )
+    );
 }
 
 export default faqItem;
