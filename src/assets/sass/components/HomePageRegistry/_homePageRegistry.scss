@@ -26,6 +26,10 @@
         color: $title-color;
     }
     > p{font-size: $text1;}
+    button{
+        margin-right: -70px;
+        margin-top: 50px;
+    }
 }
 
 
@@ -45,6 +49,7 @@
         padding : 20px 20px 0 20px;
         h2{font-size: $text1;}
         p{font-size: $text3;}
+        button{margin-right: -55px;}
     }
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
@@ -64,5 +69,6 @@
         padding:0 10px;
         p{font-size: $text3;}
         h2{font-size: $text1;}
+        button{margin-right: 0;}
     }
 }

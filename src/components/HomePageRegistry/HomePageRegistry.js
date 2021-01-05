@@ -1,23 +1,66 @@
-import React from 'react';
-import doctor from '../../assets/img/register.svg';
+import React, {Component} from 'react';
 import RegistryInput from './RegistryInput';
+import Modal from '../UI/Modal';
+
+import doctor from '../../assets/img/register.svg';
+
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
-import '../../assets/sass/base/_registryInput.scss';
 
-const homeRegistry = () => {
-    return (
-        <div class="home-register">
-            <div class="home-register_body">    
-                <h2>عضویت داروخانه یا مراکز درمانی</h2>
-                <p>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان و
-                    کسب کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست.</p>
+class homeRegistry extends Component {
+    state = {
+        showModal: false,
+        isValid : false
+    }
 
-                <RegistryInput />
+    phoneValidation = (event) => {
+        let number = event.target.value;
+        if(number.length == 11 && number.slice(1,11) > 9000000000 && number.slice(0,0) == 0){
+            this.setState({isValid: true});
+        }
+        else{
+            this.setState({isValid: false});
+        }
+    }
+    showModal = () => {
+        if(this.state.isValid){
+            this.setState({showModal: true});
+        }
+    }
+    closeModal = () => {
+        this.setState({showModal: false, isValid: false});
+    }
+    
+    render(){
+        let modal = null;
+
+        if(this.state.showModal){
+            modal = (
+                <Modal show={this.state.showModal} title="ثبت نام با موفقیت انجام شد"
+                txt="با شما تماس خواهیم گرفت">
+                    <button onClick={this.closeModal}>برگشت</button>
+                </Modal>
+            );
+        }
+
+        return (
+            <div>
+                {modal}
+
+                <div class="home-register">
+                    <div class="home-register_body">    
+                        <h2>عضویت داروخانه یا مراکز درمانی</h2>
+                        <p>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان و
+                            کسب کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست.</p>
+
+                        <RegistryInput clicked={this.showModal} isValid={this.state.isValid} validation={this.phoneValidation} />
+                    </div>
+
+                    <img src={doctor} alt="عضویت در درمانیتو" />
+                </div>                
             </div>
 
-            <img src={doctor} alt="عضویت در درمانیتو" />
-        </div>
-    )
+        )        
+    }
 };
 
 export default homeRegistry;

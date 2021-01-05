@@ -1,9 +1,10 @@
 @import "../base/base";
 
-input, button{
+input, .registry-btn{
     font-size: $text1;
     border-radius: 10px;
-    border: none;        
+    border: none;
+    outline: none;        
 }
 input{
     background-color: $input-color;
@@ -11,10 +12,9 @@ input{
     height: 65px;
     padding: 20px;
     border-radius: 10px;
-    outline: none;        
     margin-top: 50px;         
 }
-button{
+.registry-btn{
     background-color: $secondary-color;
     color: white;
     width: 130px;
@@ -30,18 +30,18 @@ button{
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    input, button{font-size: $text2;}
+    input, .registry-btn{font-size: $text2;}
     input{width: 400px;}
-    button{left: 12.5%;}
+    .registry-btn{left: 12.5%;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    input, button{font-size: $text3;}
+    input, .registry-btn{font-size: $text3;}
     input{
         width: 300px;
         height: 40px;
     }
-    button{
+    .registry-btn{
         width: 80px;
         height: 30px;
         left: 10.8%;
@@ -49,13 +49,13 @@ button{
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    input, button{font-size: $text3;}
-    input{
+    input, .registry-btn{font-size: $text3;}
+    .registry-btn{
         margin: auto;
         width: 350px;
         height: 55px;
     }
-    button{
+    .registry-btn{
         width: 90px;
         height: 35px;
         margin: 0;
