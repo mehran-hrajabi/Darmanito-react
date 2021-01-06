@@ -1,13 +1,7 @@
 @import "../../base/base";
 
-/*Header of the page*/
-.home-header{
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    @include flex(row, initial, center);
-}
+.home-header{@include flex(row, initial, center);}
 
-/*Header titles*/
 .home-header_appDl{
     @include flex(column, initial, initial);
     padding: 200px 100px;
@@ -19,7 +13,6 @@
     >p {font-size: $text1;}
 }
 
-/*Header buttons*/
 .home-btn_basic{
     font-weight: bold;
     font-size: $text1;

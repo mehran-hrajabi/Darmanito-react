@@ -3,15 +3,9 @@
 .registry-card_container{
     @include flex(column, center, center);
     width: 40%;
-    > div:nth-child(1){
-        margin: 20px 0;
-    }
-    > div:nth-child(2){
-        margin: 20px 0;
-    }
-    > div:nth-child(3){
-        margin: 20px 250px 20px 0;
-    }
+    > div:nth-child(1){margin: 20px 0;}
+    > div:nth-child(2){margin: 20px 0;}
+    > div:nth-child(3){margin: 20px 240px 20px 0;}
 }
 
 

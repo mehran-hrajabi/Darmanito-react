@@ -1,6 +1,9 @@
 @import "../../base/base";
 
-.contact-form{@include flex(initial, flex-start, initial);}
+.contact-form{
+    @include flex(initial, flex-start, initial);
+    margin-right: 120px;
+}
 
 form{margin: auto;}
 

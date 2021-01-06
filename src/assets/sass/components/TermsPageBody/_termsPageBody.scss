@@ -1,10 +1,8 @@
 @import "../../base/base";
 
 .terms-body{
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
     @include flex(column, initial, center);
-    margin: 0 50px;
+    margin: 20px 50px;
     > h4{
         font-size: $header3;
         color: $title-color;
@@ -14,15 +12,15 @@
 
 .terms-items_container{
     @include flex(row, initial, center);
+    height: 40%;
     > div{@include flex(row, initial, center);}
 }
 
 .terms-toggle{
+    height: 60%;
     margin: 50px 150px;
     >p{font-size: $text1;}
 }
-
-
 
 
 

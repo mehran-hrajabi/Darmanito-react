@@ -43,7 +43,7 @@ class homeRegistry extends Component {
         }
 
         return (
-            <div>
+            <div className="home-register_container">
                 {modal}
 
                 <div class="home-register">

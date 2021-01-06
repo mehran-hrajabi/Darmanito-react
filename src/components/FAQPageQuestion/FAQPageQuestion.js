@@ -24,7 +24,7 @@ class FAQPageQuestion extends Component{
         }
 
         return (
-            <div>
+            <div className="faq-question_body">
                 <div className="faq-question">
                     {minusPlus}
                     <h5>{this.props.question}</h5>

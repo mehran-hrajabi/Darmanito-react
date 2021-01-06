@@ -2,7 +2,7 @@ import React from "react";
 import Logo from './Logo';
 import NavLinks from './NavLinks';
 import DownloadBtn from './DownloadBtn';
-import '../../assets/sass/components/Navbar/_navbar';
+import '../../assets/sass/components/Navbar/_navbar.scss';
 
 const navbar = () => {
     return (
@@ -11,7 +11,7 @@ const navbar = () => {
             <NavLinks />
             <DownloadBtn />
         </div>
-    )
+    );
 }
 
 export default navbar;

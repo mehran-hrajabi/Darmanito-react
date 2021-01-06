@@ -6,17 +6,12 @@
     padding-top: 150px;
 }
 
-
-
 iframe{
     width: 600px;
     height: 450px;
     margin: auto;
 }
 
-
-
-p{margin:0;}
 .contact-address_info{
     @include flex(row, initial, initial);
     margin: auto;
@@ -25,7 +20,10 @@ p{margin:0;}
     bottom: 30%;
     background-color: white;
     border-radius: 10px;
-    p{font-size: $text1;}
+    p{
+        font-size: $text1;
+        margin:0;
+    }
 }
 .column-basic{
     @include flex(column, flex-start, initial);
@@ -65,7 +63,10 @@ p{margin:0;}
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    .contact-address{margin: auto;}
+    .contact-address{
+        margin: auto;
+        padding-top: 20px;
+    }
     iframe{width: 80%;}
     .contact-address_info{
         bottom: 150px;

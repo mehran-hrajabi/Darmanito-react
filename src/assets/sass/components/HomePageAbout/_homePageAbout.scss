@@ -1,15 +1,11 @@
 @import "../../base/base";
 
-/*About info*/
 .home-about{
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
     @include flex(row, center, center);
     padding: 0 100px 50px 100px;
     > img{margin-left: 80px;}
 }
 
-/*Descriptions in left side of the element*/
 .home-about_body{
     @include flex(column, initial, initial);
     height: 450px;
@@ -27,7 +23,6 @@
     }
 }
 
-/*Icons in the left side of the element*/
 .home-about_items{
     @include flex(row, initial, initial);
     > div{
@@ -58,7 +53,7 @@
     }
     .home-about_body{
         width: 60%;
-        padding-top: 100px
+        padding-top: 100px;
     }
     .home-about_txt > p{font-size: $text3;}
     .home-about_items{

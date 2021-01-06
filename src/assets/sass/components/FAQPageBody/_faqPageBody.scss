@@ -1,9 +1,6 @@
 @import "../../base/base";
 
-/*Main body with items and questions*/
 .faq-body{
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
     @include flex(column, center, initial);
     margin: 0 50px;
     h4{
@@ -13,7 +10,6 @@
     }
 }
 
-/*Four items container*/
 .faq-items-container{
     @include flex(row, initial, initial);
     padding: 0 30px;
@@ -23,8 +19,6 @@
     /*Alignment exception*/
     > div:nth-child(3){span:last-child{right: 35%;}}
 }
-
-
 
 
 

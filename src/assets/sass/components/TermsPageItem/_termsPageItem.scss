@@ -9,13 +9,14 @@
     padding: 20px;
     box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);
     cursor: pointer;
+    span{
+        text-align: center;
+        font-size: $text1;
+        color: $title-color;
+        font-weight: bold;
+    }
 }
-span{
-    text-align: center;
-    font-size: $text1;
-    color: $title-color;
-    font-weight: bold;
-}
+
 
 
 

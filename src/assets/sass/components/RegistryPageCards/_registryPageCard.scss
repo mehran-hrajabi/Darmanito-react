@@ -1,8 +1,5 @@
 @import "../../base/base";
 
-p{margin: 0;}
-h4{margin: 0;}
-
 .registry-card{
     @include flex(row, center, initial);
     padding: 20px;
@@ -15,6 +12,8 @@ h4{margin: 0;}
 .registry-card_body{
     @include flex(column, flex-start, initial);
     > div{@include flex(row, center, initial);}
+    p{margin: 0;}
+    h4{margin: 0;}
 }
 
 

@@ -1,16 +1,11 @@
 @import "../../base/base";
+@import "../../base/logo";
 
 .footer{
-    grid-column: 1 / span 1;
-    grid-row: 5 / span 1;
     @include flex(row, initial, initial);
     padding: 80px 100px 0 100px;
 }
 
-
-
-@import "../../base/logo";
-/*Right side*/
 .footer_info{
     @include flex(column, initial, initial);
     width: 35%;
@@ -18,9 +13,7 @@
         font-size: $text2;
         padding-top: 20px;
     }
-    > p{
-        font-size: $text2;
-    }
+    > p{font-size: $text2;}
 }
 .footer_icons{
     @include flex(row, initial, initial);
@@ -31,15 +24,14 @@
     }
     i{
     font-size: 25px;
-    color: #b9b9b9;
+    color: $social-media;
     }
     /*Their real color codes*/
-    .linkedin:hover{color: #0072b1;}
-    .twitter:hover{color: #00acee;}
-    .instagram:hover{color: #C13584;}
+    .linkedin:hover{color: $linkedin;}
+    .twitter:hover{color: $twitter;}
+    .instagram:hover{color: $insta;}
 }
 
-/*Middle column*/
 .footer_links{
     @include flex(column, initial, initial);
     width: 15%;
@@ -48,13 +40,9 @@
         font-weight: bold;
         font-size: $text1;
     }
-    a{
-        padding-left: 40px;
-        padding-top: 10px;
-    }
+    a{padding: 10px 0 0 40px;}
 }
 
-/*Left side*/
 .footer_badges{
     @include flex(column, initial, initial);
     width: 35%;
@@ -80,7 +68,6 @@
     .footer_links{font-size: $text2;}
     .footer_badges{padding-right: 20px;}
 }
-
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     .footer{
@@ -107,7 +94,6 @@
         }
     }
 }
-
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
     .footer{
