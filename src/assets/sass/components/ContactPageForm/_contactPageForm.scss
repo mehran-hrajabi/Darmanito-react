@@ -13,10 +13,6 @@ form{margin: auto;}
     .contact-form{margin: 0 50px;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
-@media only screen and (min-width: 768px) and (max-width: 992px) {
-    .contact-form{margin: auto;}
-}
-/*Small devices (portrait tablets and large phones, 600px-768px)*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
     .contact-form{margin: auto;}
 }

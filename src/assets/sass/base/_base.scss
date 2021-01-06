@@ -16,11 +16,19 @@ body{
 }
 
 /*All links*/
-a{color: black;}
+a{
+    color: black;
+    cursor: pointer;
+}
 a:hover{color: $secondary-color;}
 a, a:hover{text-decoration: none;}
 
 /*All headings*/
 h1, h2, h3, h4, h5{font-weight: bold;}
 
+/*All buttons and inputs*/
+button, input{
+    outline: none;
+    border: none;
+}
 button{cursor: pointer;}

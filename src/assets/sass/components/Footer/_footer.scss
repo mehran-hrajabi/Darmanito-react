@@ -23,8 +23,8 @@
         &:last-child{padding-left: 0;}
     }
     i{
-    font-size: 25px;
-    color: $social-media;
+        font-size: 25px;
+        color: $social-media;
     }
     /*Their real color codes*/
     .linkedin:hover{color: $linkedin;}
@@ -100,7 +100,10 @@
         padding-top: 0;
         margin:auto;
         .footer_links, .footer_badges{display: none;}
-        .footer_info{width: 100%; margin:auto;}
+        .footer_info{
+            width: 100%;
+            margin:auto;
+        }
         .footer_icons{@include flex(initial, initial, center);}
     }
 }

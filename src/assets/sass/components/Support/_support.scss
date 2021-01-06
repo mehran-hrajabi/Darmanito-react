@@ -41,7 +41,8 @@
         > div{margin: 0 80px;}
         h2{font-size: $text1;}
         p{font-size: $text3;}
-        span{font-size: $text3;
+        span{
+            font-size: $text3;
             left: 15%;
         }
         img{width: 25%;}
@@ -70,7 +71,8 @@
             position: relative;
             right: 3%;
         }
-        span{position: relative;
+        span{
+            position: relative;
             bottom: 50%;
             left: 0;
             right: 25%;

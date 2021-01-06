@@ -46,8 +46,8 @@ class homeRegistry extends Component {
             <div className="home-register_container">
                 {modal}
 
-                <div class="home-register">
-                    <div class="home-register_body">    
+                <div className="home-register">
+                    <div className="home-register_body">    
                         <h2>عضویت داروخانه یا مراکز درمانی</h2>
                         <p>اگر به عنوان داروخانه یا مرکز درمانی قصد دارید در روند درمان و
                             کسب کار خودتان تغییری ایجاد کنید درمانیتو منتظر شماست.</p>
