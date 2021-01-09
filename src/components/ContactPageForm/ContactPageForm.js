@@ -14,11 +14,6 @@ class ContactForm extends Component {
                 },
                 value: "",
                 label: "نام و نام خانوادگی",
-                validationRules: {
-                    required: true,
-                    minLength: 3,
-                    maxLength: 20
-                },
                 valid: false
             },
 
@@ -30,11 +25,6 @@ class ContactForm extends Component {
                 },
                 value: "",
                 label: "ایمیل یا شماره همراه",
-                validationRules: {
-                    required: true,
-                    minLength: 7,
-                    maxLength: 30
-                },
                 valid: false
             },
 
@@ -45,30 +35,9 @@ class ContactForm extends Component {
                 },
                 value: "",
                 label: "پیام شما",
-                validationRules: {
-                    required: true,
-                    minLength: 10,
-                    maxLength: 150
-                },
                 valid: false
             }
         }            
-    }
-
-    formValidation = (value, rules) => {
-        let isValid = false;
-
-        if(rules.required){
-            isValid = value.trim() !== '' && isValid ;
-        }
-
-        if(rules.minLength){
-            isValid = value.length >= rules.minLength && isValid;
-        }
-
-        if(rules.maxLength){
-            isValid = value.length <= rules.maxLength && isValid;
-        }
     }
 
     inputChangedHandler = (event, inputID) => {
@@ -79,13 +48,40 @@ class ContactForm extends Component {
             ...updatedForm[inputID]
         };
         updatedElement.value = event.target.value;
-        updatedElement.valid = this.formValidation(updatedElement.value, updatedElement.validationRules);
         updatedForm[inputID] = updatedElement;
         this.setState({contactForm: updatedForm});
     }
 
+    formValidation = () =>{
+        let submittedForm = {
+            ...this.state.contactForm
+        };
+
+        let nameInput = submittedForm.name;
+        let emailPhoneInput = submittedForm.emailPhone;
+        let messageInput = submittedForm.message;
+        const phonePattern = new RegExp(/^\d+$/);
+        const emailPattern = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
+
+        
+        if(nameInput.value.trim().length > 3){
+            nameInput.valid = true;
+        }
+        if(messageInput.value.trim().length > 10){
+            messageInput.valid = true;
+        }
+        if(emailPattern.test(emailPhoneInput.value)){
+            emailPhoneInput.valid = true;
+        }
+        else if(phonePattern.test(emailPhoneInput.value) &&
+                        (emailPhoneInput.value.length == 11 &&
+                            emailPhoneInput.value.slice(1,11) > 9000000000 &&
+                            emailPhoneInput.value.slice(0,0) == 0)){
+            emailPhoneInput.valid = true;
+        }
+    }
+
     render(){
-            
         let formElementsArray = [];
         for(let key in this.state.contactForm){
             formElementsArray.push({
@@ -105,10 +101,9 @@ class ContactForm extends Component {
                         label = {formElement.config.label}
                         changed = {(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <button type="button">ارسال پیام</button>
+                <button onClick={this.formValidation} type="button">ارسال پیام</button>
             </form>
         );
-
 
         return(
             <div className="contact-form">{form}</div>
