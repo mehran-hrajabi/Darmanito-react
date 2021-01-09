@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Input from './ContactInput';
+import Feedback from './ContactFormFeedback';
 import '../../assets/sass/components/ContactPageForm/_contactPageForm.scss';
 
 class ContactForm extends Component {
-
     state = {
         contactForm: {
             name: {
@@ -37,10 +37,12 @@ class ContactForm extends Component {
                 label: "پیام شما",
                 valid: false
             }
-        }            
+        },
+        showFeedback: false
     }
 
     inputChangedHandler = (event, inputID) => {
+        //Handling input changes and update values
         const updatedForm = {
             ...this.state.contactForm
         };
@@ -56,29 +58,43 @@ class ContactForm extends Component {
         let submittedForm = {
             ...this.state.contactForm
         };
-
         let nameInput = submittedForm.name;
         let emailPhoneInput = submittedForm.emailPhone;
         let messageInput = submittedForm.message;
         const phonePattern = new RegExp(/^\d+$/);
         const emailPattern = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
 
+        //Set default states for validation if user wants to send message again 
+        nameInput.valid = false;
+        messageInput.valid = false;
+        emailPhoneInput.valid = false;
         
+        //Name must be more than 3 characters
         if(nameInput.value.trim().length > 3){
             nameInput.valid = true;
         }
+        //Message must be more than 10 characters
         if(messageInput.value.trim().length > 10){
             messageInput.valid = true;
         }
+        //Email or phone must match the regular expressions
         if(emailPattern.test(emailPhoneInput.value)){
             emailPhoneInput.valid = true;
         }
-        else if(phonePattern.test(emailPhoneInput.value) &&
+        if(phonePattern.test(emailPhoneInput.value) &&
                         (emailPhoneInput.value.length == 11 &&
                             emailPhoneInput.value.slice(1,11) > 9000000000 &&
                             emailPhoneInput.value.slice(0,0) == 0)){
             emailPhoneInput.valid = true;
         }
+        //Refresh the form after submission
+        if(nameInput.valid && emailPhoneInput.valid && messageInput.valid){
+            nameInput.value = "";
+            emailPhoneInput.value = "";
+            messageInput.value = "";
+        }
+        this.setState({contactForm: submittedForm});
+        this.setState({showFeedback: true});
     }
 
     render(){
@@ -105,8 +121,20 @@ class ContactForm extends Component {
             </form>
         );
 
+        let feedback = null;
+        if(this.state.showFeedback){
+            feedback = (
+                <Feedback isNameValid={this.state.contactForm.name.valid}
+                            isEmailPhoneValid = {this.state.contactForm.emailPhone.valid}
+                            isMessageValid = {this.state.contactForm.message.valid} />
+            );            
+        }
+
         return(
-            <div className="contact-form">{form}</div>
+            <div className="contact-form">
+                {feedback}
+                {form}
+            </div>
         );
     }
 }

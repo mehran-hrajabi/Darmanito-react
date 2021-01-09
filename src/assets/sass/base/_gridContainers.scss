@@ -28,7 +28,7 @@
     .faq-grid{grid-template-rows: 100px 100px 900px 100px 200px;}
     .registry-grid{grid-template-rows: 100px 750px 100px 700px 100px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 800px 100px 200px;}
-    .contact-grid{grid-template-rows: 100px 100px 1200px 100px 200px;}
+    .contact-grid{grid-template-rows: 100px 100px 1300px 100px 200px;}
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
@@ -36,5 +36,5 @@
     .faq-grid{grid-template-rows: 100px 100px 950px 170px 200px;}
     .registry-grid{grid-template-rows: 100px 600px 300px 1300px 170px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 850px 170px 200px;}
-    .contact-grid{grid-template-rows: 100px 100px 1100px 170px 200px;}
+    .contact-grid{grid-template-rows: 100px 100px 1200px 170px 200px;}
 }

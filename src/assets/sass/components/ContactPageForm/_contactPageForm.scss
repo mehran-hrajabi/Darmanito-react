@@ -1,8 +1,22 @@
 @import "../../base/base";
+@import './contactFormInput';
 
 .contact-form{
-    @include flex(initial, flex-start, initial);
+    @include flex(column, flex-start, initial);
     margin-right: 120px;
+    button{
+        @extend .form-basic;
+        height: 50px;
+        background-color: white;
+        color: $secondary-color;
+        font-size: $text1;
+        border: 1px solid $secondary-color;
+        margin-top: 15px;
+        &:hover{
+            background-color: $btn-hover;
+            transition-duration: 0.5s;
+        }
+    }
 }
 
 form{margin: auto;}
