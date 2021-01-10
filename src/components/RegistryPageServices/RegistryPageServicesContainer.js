@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Service from '../RegistryPageService/RegistryPageService';
-import '../../assets/sass/components/RegistryPageServicesContainer/_registryPageServicesContainer.scss';
+import Service from './RegistryPageService';
+import '../../assets/sass/components/RegistryPageServices/_registryPageServicesContainer.scss';
 
 import Pharmacy from '../../assets/img/pharmacy.svg';
 import Cosmetics from '../../assets/img/shop.svg';

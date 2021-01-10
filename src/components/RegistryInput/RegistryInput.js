@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/sass/base/_registryInput.scss';
+import '../../assets/sass/components/RegistryInput/_registryInput.scss';
 import '../../assets/sass/base/_btnCursor.scss';
 
 const registryInput = (props) => {

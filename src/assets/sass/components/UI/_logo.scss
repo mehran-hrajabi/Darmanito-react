@@ -1,7 +1,4 @@
-@import "../../lib/var";
-@import "../../lib/mixins";
-
-h3,p{margin: 0;}
+@import "../../base/base";
 
 .darmanito_logo{
     @include flex(row, initial, initial);
@@ -13,4 +10,5 @@ h3,p{margin: 0;}
     div{@include flex(column, initial, center);}
     h3{font-size: 18px;}
     p{font-size: $text3;}
+    h3,p{margin: 0;}
 }

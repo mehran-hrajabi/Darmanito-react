@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/sass/components/RegistryPageService/_registryPageService.scss';
+import '../../assets/sass/components/RegistryPageServices/_registryPageService.scss';
 
 const registryService = (props) => {
     return(

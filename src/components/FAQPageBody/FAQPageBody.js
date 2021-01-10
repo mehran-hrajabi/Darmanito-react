@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import Item from '../FAQPageItem/FAQPageItem';
-import PharmacyContainer from '../FAQPageQuestionsContainer/FAQPagePharmacyContainer';
-import ShopContainer from '../FAQPageQuestionsContainer/FAQPageShopContainer';
+import PharmacyContainer from '../FAQPageQuestions/FAQPagePharmacyContainer';
+import ShopContainer from '../FAQPageQuestions/FAQPageShopContainer';
 
 import '../../assets/sass/components/FAQPageBody/_faqPageBody.scss';
 import '../../assets/sass/base/_itemOpacity.scss';
@@ -13,7 +13,6 @@ import Visit from '../../assets/img/visit_icon.svg';
 import Reserve from '../../assets/img/reserve_icon.svg';
 
 class FAQPageBody extends Component{
-
     state = {
         showPharmacy: true,
         showShop : false
@@ -31,7 +30,6 @@ class FAQPageBody extends Component{
     }
 
     render(){
-
         let questionsList = null;
         const pharmacyClass = [], shopClass = [];
 

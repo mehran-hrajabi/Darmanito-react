@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../Navbar/Logo';
+import Logo from '../UI/Logo';
 import bazaar from '../../assets/img/bazaar_badge.svg';
 import sib from '../../assets/img/sib_badge.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,7 +47,7 @@ const footer = () => {
                 </div>
             </div>
     </div>
-    )
+    );
 };
 
 export default footer;

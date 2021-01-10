@@ -1,5 +1,5 @@
 import React from 'react';
-import Register from '../HomePageRegistry/RegistryInput';
+import Register from '../RegistryInput/RegistryInput';
 import '../../assets/sass/components/RegistryPageInfo/_registryPageInfo.scss';
 
 const registryInfo = () => {

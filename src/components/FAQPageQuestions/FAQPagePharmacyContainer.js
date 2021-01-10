@@ -1,6 +1,6 @@
 import React from 'react';
-import Question from '../FAQPageQuestion/FAQPageQuestion';
-import '../../assets/sass/components/FAQPageQuestionsContainer/_faqPageQuestionsContainer.scss';
+import Question from '../FAQPageQuestions/FAQPageQuestion';
+import '../../assets/sass/components/FAQPageQuestions/_faqPageQuestionsContainer.scss';
 
 const FAQPagePharmacyContainer = () => {
 

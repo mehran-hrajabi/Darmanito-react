@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import Plus from '../../assets/img/plus.svg';
 import Minus from '../../assets/img/minus.svg';
-import '../../assets/sass/components/FAQPageQuestion/_faqPageQuestion.scss';
+import '../../assets/sass/components/FAQPageQuestions/_faqPageQuestion.scss';
 
 class FAQPageQuestion extends Component{
-
     state = {
         showAnswer: false
     }

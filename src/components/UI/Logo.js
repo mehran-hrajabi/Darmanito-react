@@ -1,5 +1,6 @@
 import React from 'react';
 import darmanito from '../../assets/img/navbar_icon.svg';
+import '../../assets/sass/components/UI/_logo.scss';
 
 const logo = () => {
     return(
@@ -10,7 +11,7 @@ const logo = () => {
                 <p>همراه شما در درمان</p>
             </div>
         </div>
-    )
+    );
 };
 
 export default logo;

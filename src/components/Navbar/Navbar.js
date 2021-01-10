@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Logo from './Logo';
+import Logo from '../UI/Logo';
 import NavLinks from './NavLinks';
 import DownloadBtn from './DownloadBtn';
 import Hamburger from './HamburgerMenu';
@@ -16,7 +16,6 @@ class navbar extends Component {
     hamburgerMenuHandler = () => {
         let doesShow = this.state.showMenu;
         this.setState({showMenu: !doesShow});
-        console.log(this.state.showMenu);
     }
     render(){
         let hamburgerMenu = null;

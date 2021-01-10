@@ -3,7 +3,7 @@ import '../assets/sass/base/_gridContainers.scss';
 import Navbar from '../components/Navbar/Navbar';
 import Header from '../components/RegistryPageHeader/RegistryPageHeader';
 import Stats from '../components/RegistryPageStats/RegistryPageStats';
-import Services from '../components/RegistryPageServicesContainer/RegistryPageServicesContainer';
+import Services from '../components/RegistryPageServices/RegistryPageServicesContainer';
 import Support from '../components/Support/Support';
 import Footer from '../components/Footer/Footer';
 

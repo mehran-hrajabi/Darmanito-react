@@ -1,6 +1,6 @@
 import React from 'react';
-import Question from '../FAQPageQuestion/FAQPageQuestion';
-import '../../assets/sass/components/FAQPageQuestionsContainer/_faqPageQuestionsContainer.scss';
+import Question from './FAQPageQuestion';
+import '../../assets/sass/components/FAQPageQuestions/_faqPageQuestionsContainer.scss';
 
 const FAQShopContainer = () => {
 
@@ -23,7 +23,7 @@ const FAQShopContainer = () => {
             <Question question={shopQuestions[2]} answer={shopAnswers[2]}></Question>
             <Question question={shopQuestions[3]} answer={shopAnswers[3]}></Question>                     
         </div>
-            );
+        );
 
         return <div>{shopContainer}</div>
 }
