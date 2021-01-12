@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import RegistryInput from '../RegistryInput/RegistryInput';
 import Modal from '../UI/Modal';
-
 import doctor from '../../assets/img/register.svg';
-
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
 
 class homeRegistry extends Component {

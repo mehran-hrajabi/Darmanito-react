@@ -32,3 +32,17 @@ button, input{
     border: none;
 }
 button{cursor: pointer;}
+button:disabled{cursor: not-allowed;}
+
+/*َAll input placeholders*/
+::placeholder{
+    font-size: $text2;
+    color: $placeholder-color;
+    padding: 10px;
+}
+
+/*All input labels*/
+label{
+    font-size: $text3;
+    padding-bottom: 5px;
+}

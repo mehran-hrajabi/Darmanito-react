@@ -2,6 +2,7 @@
 
 .registry-card{
     @include flex(row, center, initial);
+    background-color: white;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);

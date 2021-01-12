@@ -9,7 +9,7 @@
         font-size: $header2;
     }
     p{font-size: $text1;}
-    button{margin-right: -80px;}
+    .registry-btn{margin-right: -80px;}
 }
 
 
@@ -18,7 +18,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1200px){
     .registry-info{
         width: 55%;
-        button{margin-right: -80px;}
+        .registry-btn{margin-right: -80px;}
     }
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
@@ -27,7 +27,7 @@
         width: 100%;
         h1{font-size: $header3;}
         p{font-size: $text2;}
-        button{margin-right: -50px;}
+        .registry-btn{margin-right: -50px;}
     }
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
@@ -43,7 +43,7 @@
             height: 55px;
             padding: 15px;
         }
-        button{
+        .registry-btn{
             margin-right: -100px;
             left: 0;
             font-size: $text3;

@@ -1,52 +1,24 @@
-import React, {Component} from "react";
+import React from "react";
 import Modal from '../UI/Modal';
+import homeRegistry from "../HomePageRegistry/HomePageRegistry";
+
+import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
 
 import download from '../../assets/img/download_badge.svg';
 import bazaar from '../../assets/img/bluebazaar_badge.svg';
 import sib from '../../assets/img/bluesib_badge.svg';
 import phone from '../../assets/img/app_phone.svg';
 
-import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
-import '../../assets/sass/base/_btnCursor.scss';
 
-
-class homeApp extends Component {
-    state = {
-        showModal: false,
-        isValid : false
-    }
-
-    phoneValidation = (event) => {
-        let number = event.target.value;
-        if(number.length == 11 && number.slice(1,11) > 9000000000 && number.slice(0,0) == 0){
-            this.setState({isValid: true});
-        }
-        else{
-            this.setState({isValid: false});
-        }
-    }
-    showModal = () => {
-        if(this.state.isValid){
-            this.setState({showModal: true});
-        }
-    }
-    closeModal = () => {
-        this.setState({showModal: false, isValid: false});
-    }
-
+class homeApp extends homeRegistry {
     render(){
         let modal = null;
-        let btnClass = "forbidden";
-
         if(this.state.showModal){
             modal = (
                 <Modal show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
                     <button onClick={this.closeModal}>برگشت</button>
                 </Modal>
             );
-        }
-        if(this.state.isValid){
-            btnClass = "allowed";
         }
 
         return (
@@ -60,7 +32,9 @@ class homeApp extends Component {
                         <div>
                             <input onChange={this.phoneValidation} type="text"
                             placeholder="شماره همراه را وارد کنید 900 36 61 0912" />
-                            <button className={btnClass} onClick={this.showModal} type="button">بفرست</button>
+                            <button onClick={this.showModal} disabled={!this.state.isValid} type="button">
+                                بفرست
+                            </button>
                         </div>
 
                         <div className="home-app_badge">

@@ -13,11 +13,6 @@
     }
 }
 
-label{
-    font-size: $text3;
-    padding-bottom: 5px;
-}
-
 .input{
     @extend .form-basic;
     height: 50px;
@@ -26,12 +21,6 @@ label{
 .textarea{
     @extend .form-basic;
     height: 150px;
-}
-
-::placeholder{
-    font-size: $text2;
-    color: $placeholder-color;
-    padding: 10px;
 }
 
 
