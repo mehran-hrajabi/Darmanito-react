@@ -1,0 +1,45 @@
+@import "../../base/base";
+
+.registry-form_container{@include flex(row, initial, initial);}
+
+.registry-form{
+    width: 50%;
+    padding: 50px 100px;
+    > div{@include flex(column, initial, center);}
+    > h4{font-size: $text1;}
+}
+
+.register-btn{
+    width: 170px;
+    height: 50px;
+    font-size: $text1;
+    font-weight: bold;
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    margin-top: 40px;
+    &:hover{opacity: 0.7;}
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .registry-form{
+        width: 45%;
+        padding: 50px;
+    }
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .registry-form_container{@include flex(column-reverse, initial, initial);}
+    .registry-form{width: 100%;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .registry-form_container{@include flex(column-reverse, initial, initial);}
+    .registry-form{
+        width: 100%;
+        >h4{display: none;}
+    }
+}
