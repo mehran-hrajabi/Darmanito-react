@@ -20,7 +20,7 @@ a{
     color: black;
     cursor: pointer;
 }
-a:hover{color: $secondary-color;}
+a:hover, a:active, a.active{color: $secondary-color;}
 a, a:hover{text-decoration: none;}
 
 /*All headings*/

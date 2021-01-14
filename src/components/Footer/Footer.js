@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import Logo from '../UI/Logo';
 import bazaar from '../../assets/img/bazaar_badge.svg';
 import sib from '../../assets/img/sib_badge.svg';
@@ -25,18 +25,18 @@ const footer = () => {
 
             <div className="footer_links">
                 <p>خدمات درمانیتو</p>
-                <Link to="">داروخانه آنلاین</Link>
-                <Link to="">فروشگاه آنلاین</Link>
-                <Link to="">ویزیت آنلاین</Link>
-                <Link to="">پرونده پزشکی</Link>
+                <NavLink to="/online-pharmacy" exact>داروخانه آنلاین</NavLink>
+                <NavLink to="/online-shop" exact>فروشگاه آنلاین</NavLink>
+                <NavLink to="/online-visit" exact>ویزیت آنلاین</NavLink>
+                <NavLink to="/medical-case" exact>پرونده پزشکی</NavLink>
             </div>
 
             <div className="footer_links">
                 <p>صفحات درمانیتو</p>
-                <Link to="/contact">تماس با ما</Link>
-                <Link to="">درباره ما</Link>
-                <Link to="/faq">سوالات متداول</Link>
-                <Link to="/terms">قوانین و شرایط</Link>
+                <NavLink to="/contact" exact>تماس با ما</NavLink>
+                <NavLink to="/about" exact>درباره ما</NavLink>
+                <NavLink to="/faq" exact>سوالات متداول</NavLink>
+                <NavLink to="/terms" exact>قوانین و شرایط</NavLink>
             </div>
 
             <div className="footer_badges">
