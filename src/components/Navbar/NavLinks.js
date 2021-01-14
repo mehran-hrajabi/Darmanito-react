@@ -1,12 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const navLinks = () => {
     return (
         <div className="main-nav_menu">
-            <a href="index.html">صفحه اصلی</a>
-            <a href="#">درباره ما</a>
-            <a href="contact.html">تماس با ما</a>
-            <a href="membership.html">عضویت داروخانه ها</a>
+            <Link to="/">صفحه اصلی</Link>
+            <Link to="">درباره ما</Link>
+            <Link to="/contact">تماس با ما</Link>
+            <Link to="/registry">عضویت داروخانه ها</Link>
         </div>
     )
 };

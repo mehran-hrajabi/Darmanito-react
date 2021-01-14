@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Logo from '../UI/Logo';
 import DownloadBtn from './DownloadBtn';
 
@@ -15,12 +16,12 @@ const hamburgerMenu = (props) =>{
             {props.children}
 
             <div className="hamburger_body">
-                <a>صفحه اصلی</a>
-                <a>عضویت در داروخانه ها</a>
-                <a>درباره ما</a>
-                <a>تماس با ما</a>
-                <a>سوالات متداول</a>
-                <a>قوانین و شرایط</a>
+                <Link to="/">صفحه اصلی</Link>
+                <Link to="/registry">عضویت داروخانه ها</Link>
+                <Link to="">درباره ما</Link>
+                <Link to="/contact">تماس با ما</Link>
+                <Link to="/faq">سوالات متداول</Link>
+                <Link to="/terms">قوانین و شرایط</Link>
                 <hr />
                 <DownloadBtn />
             </div>
