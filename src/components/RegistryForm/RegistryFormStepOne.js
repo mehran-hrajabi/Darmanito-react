@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Cards from '../RegistryFormCards/RegistryFormCardContainer';
 import Input from './RegistryFormInput';
 import Person from '../../assets/img/person_icon.svg';
@@ -141,10 +142,25 @@ class RegistryFormOne extends Component {
         return(
             <div className="registry-form_container">
                 {form}
-                <Cards title="نام داروخانه شما" name="شما">{Person}</Cards>
+                {/*<Cards title="نام داروخانه شما" name="شما">{Person}</Cards>*/}
             </div>
         );
     }
 }
 
+/*const mapStateToProps = state => {
+    return {
+        registryFormCopy: state.registryForm,
+        isFormValidCopy: state.isFormValid
+    };
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        changedHandlerDispatch: () => dispatch({type: CHANGED_HANDLER}),
+        validationDispatch: () => dispatch({type: CHECK_VALIDITY})
+    };
+}*/
+
+//export default connect(mapStateToProps, mapDispatchToProps)(RegistryFormOne);
 export default RegistryFormOne;

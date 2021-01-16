@@ -1,10 +1,10 @@
 @import "../../base/base";
 
-input, .registry-btn{
+.ui-registry-input, .ui-registry-btn{
     font-size: $text1;
     border-radius: 10px;
 }
-input{
+.ui-registry-input{
     background-color: $input-color;
     width: 500px;
     height: 65px;
@@ -12,7 +12,7 @@ input{
     border-radius: 10px;
     margin-top: 50px;         
 }
-.registry-btn{
+.ui-registry-btn{
     background-color: $secondary-color;
     color: white;
     width: 130px;
@@ -28,18 +28,18 @@ input{
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    input, .registry-btn{font-size: $text2;}
-    input{width: 400px;}
+    .ui-registry-input, .ui-registry-btn{font-size: $text2;}
+    .ui-registry-input{width: 400px;}
     .registry-btn{left: 12.5%;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    input, .registry-btn{font-size: $text3;}
-    input{
+    .ui-registry-input, .ui-registry-btn{font-size: $text3;}
+    .ui-registry-input{
         width: 300px;
         height: 40px;
     }
-    .registry-btn{
+    .ui-registry-btn{
         width: 80px;
         height: 30px;
         left: 10.8%;
@@ -47,13 +47,8 @@ input{
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    input, .registry-btn{font-size: $text3;}
-    .registry-btn{
-        margin: auto;
-        width: 350px;
-        height: 55px;
-    }
-    .registry-btn{
+    .ui-registry-input, .registry-btn{font-size: $text3;}
+    .ui-registry-btn{
         width: 90px;
         height: 35px;
         margin: 0;

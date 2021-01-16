@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import RegistryInput from '../RegistryInput/RegistryInput';
+import RegistryInput from '../UI/RegistryInput';
 import Modal from '../UI/Modal';
 import doctor from '../../assets/img/register.svg';
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
