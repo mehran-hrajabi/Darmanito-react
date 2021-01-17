@@ -1,4 +1,4 @@
-.home-grid, .faq-grid, .registry-grid, .terms-grid, .contact-grid{
+.home-grid, .faq-grid, .registry-grid, .terms-grid, .contact-grid, .form-grid{
     display: grid;
     grid-template-columns: 100%;
     >div{grid-column: 1 / span 1;}
@@ -20,6 +20,7 @@
 .registry-grid{grid-template-rows: 100px 650px 150px 850px 130px 350px;}
 .terms-grid{grid-template-rows: 100px 120px 800px 130px 350px;}
 .contact-grid{grid-template-rows: 100px 120px 750px 130px 350px;}
+.form-grid{grid-template-rows: 100px 800px;}
 
 
 /*Medium devices (landscape tablets, 768px-992px)*/
@@ -29,6 +30,7 @@
     .registry-grid{grid-template-rows: 100px 750px 100px 700px 100px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 800px 100px 200px;}
     .contact-grid{grid-template-rows: 100px 100px 1300px 100px 200px;}
+    .form-grid{grid-template-rows: 100px 1200px;}
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
@@ -37,4 +39,5 @@
     .registry-grid{grid-template-rows: 100px 600px 300px 1300px 170px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 850px 170px 200px;}
     .contact-grid{grid-template-rows: 100px 100px 1200px 170px 200px;}
+    .form-grid{grid-template-rows: 100px 800px;}
 }

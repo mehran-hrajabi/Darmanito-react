@@ -1,11 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
-import Home from './home';
-import FAQ from './faq';
-import Contact from'./contact';
-import Registry from './registry';
-import Terms from './terms';
+import Home from './Home';
+import FAQ from './FAQ';
+import Registry from './Registry';
+import Contact from'./Contact';
+import About from './About';
+import Terms from './Terms';
 import ScrollToTop from '../components/UI/ScrollToTop';
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/faq" component={FAQ} />
-          <Route path="/contact" component={Contact} />
           <Route path="/registry" component={Registry} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About} />
           <Route path="/terms" component={Terms} />  
         </Switch>      
       </BrowserRouter>

@@ -1,21 +1,13 @@
 import React from 'react';
 import '../assets/sass/base/_gridContainers.scss';
 import Navbar from '../components/Navbar/Navbar';
-import Header from '../components/RegistryPageHeader/RegistryPageHeader';
-import Stats from '../components/RegistryPageStats/RegistryPageStats';
-import Services from '../components/RegistryPageServices/RegistryPageServicesContainer';
-import Support from '../components/Support/Support';
-import Footer from '../components/Footer/Footer';
+import Form from '../components/RegistryForm/RegistryForm';
 
 const registry = () => {
-    return (
-        <div className="registry-grid">
+    return(
+        <div className="form-grid">
             <Navbar />
-            <Header />
-            <Stats />
-            <Services />
-            <Support />
-            <Footer />            
+            <Form />
         </div>
     );
 }

@@ -1,5 +1,7 @@
 @import "../../base/base";
 
+.registry-form_input{@include flex(column, initial, initial);}
+
 .input-basic{
     width: 360px;
     height: 45px;
@@ -24,6 +26,32 @@
     }
 }
 
+
+
+input[type=number]{
+    width: 50px;
+    height: 40px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+select{
+    @extend .input-basic;
+    cursor: pointer;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.registry-form_radio{
+    @include flex(row, initial, initial);
+    > div{
+        border: 2px solid $input-focus;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        padding: 5px;
+        width: 100px;
+        height: 40px;
+    }
+    input{cursor: pointer;}
+}
 
 
 /*Small devices (portrait tablets and large phones, 600px-768px)*/

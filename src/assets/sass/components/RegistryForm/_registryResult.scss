@@ -1,0 +1,97 @@
+@import "../../base/base";
+
+.registry-result{
+    @include flex(column, initial, initial);
+    width: 50%;
+    padding: 50px 100px;
+    p{font-size: $text1}
+}
+
+.result-row1{
+    @include flex(row, initial, initial);
+    .result-row1-col1{
+        margin-left: 80px;
+    }
+    .result-row1-col2{
+        margin-left: 80px;
+    }
+    .result-row1-col3{
+
+    }
+}
+
+.result-row2{
+    @include flex(row, initial, initial);
+    margin-top: 50px;
+    .result-row2-col1{
+        margin-left: 80px;
+    }
+    .result-row2-col2{
+
+    }
+}
+
+.result-row3{
+    @include flex(column, initial, initial);
+    margin-top: 50px;
+}
+
+.result-row4{
+    @include flex(row, initial, initial);
+    margin-top: 50px;
+    .result-row4-col1{
+        margin-left: 80px;
+    }
+    .result-row4-col2{
+
+    }
+}
+
+.button-basic{
+    font-weight: bold;
+    font-size: $text1;
+    margin: 30px 0 0 15px;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.result-row5{
+    @include flex(row, initial, initial);
+    > button:first-child{
+        @extend .button-basic;
+        color: $btn-text;
+        background-color: white;
+        border: 1px solid $btn-border !important;
+        &:hover{background-color: $btn-hover;}
+    }
+    > button:last-child{
+        @extend .button-basic;
+        color: white;
+        background-color: $secondary-color;
+        &:hover{opacity: 0.7;}
+    }
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .registry-result{width: 45%;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .registry-result{width: 100%;}
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .registry-result{
+        width: 100%;
+        padding: 50px;
+        p{font-size: $text2;}
+    }
+    .result-row5{
+        @include flex(column, initial, initial);
+        margin: auto;
+    }
+}
