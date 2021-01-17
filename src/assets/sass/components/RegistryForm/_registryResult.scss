@@ -9,42 +9,21 @@
 
 .result-row1{
     @include flex(row, initial, initial);
-    .result-row1-col1{
-        margin-left: 80px;
-    }
-    .result-row1-col2{
-        margin-left: 80px;
-    }
-    .result-row1-col3{
-
-    }
+    >div:nth-child(1), >div:nth-child(2){margin-left: 80px;}
 }
-
 .result-row2{
     @include flex(row, initial, initial);
     margin-top: 50px;
-    .result-row2-col1{
-        margin-left: 80px;
-    }
-    .result-row2-col2{
-
-    }
+    >div:first-child{margin-left: 80px;}
 }
-
 .result-row3{
     @include flex(column, initial, initial);
     margin-top: 50px;
 }
-
 .result-row4{
     @include flex(row, initial, initial);
     margin-top: 50px;
-    .result-row4-col1{
-        margin-left: 80px;
-    }
-    .result-row4-col2{
-
-    }
+    >div:first-child{margin-left: 80px;}
 }
 
 .button-basic{
@@ -62,7 +41,7 @@
         @extend .button-basic;
         color: $btn-text;
         background-color: white;
-        border: 1px solid $btn-border !important;
+        border: 1px solid $btn-border;
         &:hover{background-color: $btn-hover;}
     }
     > button:last-child{

@@ -5,25 +5,25 @@ const result = (props) => {
     return(
         <div className="registry-result">
             <div className="result-row1">
-                <div className="result-row1-col1">
+                <div>
                     <p>نام داروخانه</p>
                     <p>{props.pharName}</p>
                 </div>
-                <div className="result-row1-col2">
+                <div>
                     <p>شماره داروخانه</p>
                     <p>{props.pharNumber}</p>
                 </div>
-                <div className="result-row1-col3">
+                <div>
                     <p>شهر</p>
                     <p>{props.city}</p>
                 </div>
             </div>
             <div className="result-row2">
-                <div className="result-row2-col1">
+                <div>
                     <p>منطقه</p>
                     <p>{props.region}</p>
                 </div>
-                <div className="result-row2-col2">
+                <div>
                     <p>ساعت کاری</p>
                     <p>{props.shift}</p>
                 </div>
@@ -33,11 +33,11 @@ const result = (props) => {
                 <p>{props.address}</p>
             </div>
             <div className="result-row4">
-                <div className="result-row4-col1">
+                <div>
                     <p>نام و نام خانوادگی موسس</p>
                     <p>{props.name}</p>
                 </div>
-                <div className="result-row4-col2">
+                <div>
                     <p>شماره نظام پزشکی</p>
                     <p>د - {props.medNumber}</p>
                 </div>

@@ -22,7 +22,6 @@ class RegistryFormOne extends Component {
                     minLength: 3
                 }
             },
-
             medicalNumber: {
                 elementType: "input",
                 elementConfig: {
@@ -37,7 +36,6 @@ class RegistryFormOne extends Component {
                     numberRegExp: /^\d+$/
                 }
             },
-
             pharmacyName: {
                 elementType: "input",
                 elementConfig: {
@@ -52,14 +50,13 @@ class RegistryFormOne extends Component {
                     minLength: 3
                 }
             },
-
             pharmacyNumber: {
                 elementType: "input",
                 elementConfig: {
                     type: "text",
                     placeholder: "به عنوان اطلاعات تماس به کاربر نشان داده می شود"
                 },
-                label: "شماره داروخانه",
+                label: "شماره داروخانه (به همراه کد شهر)",
                 value: "",
                 valid: false,
                 validationRules: {
@@ -69,6 +66,7 @@ class RegistryFormOne extends Component {
                 }
             }
         },
+
         registryForm2: {
             city: {
                 elementType: "select",
@@ -79,11 +77,10 @@ class RegistryFormOne extends Component {
                     ]
                 },
                 label: "شهر",
-                value: "",
+                value: "تهران",
                 valid: true,
                 validationRules: {}
             },
-
             region: {
                 elementType: "input",
                 elementConfig: {
@@ -96,7 +93,6 @@ class RegistryFormOne extends Component {
                 valid: true,
                 validationRules: {}
             },
-
             address: {
                 elementType: "input",
                 elementConfig: {
@@ -111,7 +107,6 @@ class RegistryFormOne extends Component {
                     minLength: 20
                 }
             },
-
             shift: {
                 elementType: "input",
                 elementConfig: {
@@ -150,7 +145,7 @@ class RegistryFormOne extends Component {
             isValid = numberPattern.test(value.trim()) && isValid;
         }
         if(rules.phone){
-            isValid = value.length == 11 && value.slice(1,11) > 9000000000 && value.slice(0,0) == 0 && isValid;
+            isValid = value.length == 11 && value.slice(1,11) > 1000000000 && value.slice(0,0) == 0 && isValid;
         }
         return isValid;
     }
@@ -216,8 +211,8 @@ class RegistryFormOne extends Component {
     submit = () =>{
         let isSecondStep = this.state.secondStep;
         let isLastStep = this.state.lastStep;
-        let isSuccessfull = this.state.successMessage;
-        this.setState({secondStep: !isSecondStep, lastStep: !isLastStep, successMessage: !isSuccessfull});
+        let isSuccessful = this.state.successMessage;
+        this.setState({secondStep: !isSecondStep, lastStep: !isLastStep, successMessage: !isSuccessful});
     }
 
     render(){
