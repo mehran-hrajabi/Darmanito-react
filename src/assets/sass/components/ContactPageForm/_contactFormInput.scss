@@ -13,12 +13,12 @@
     }
 }
 
-.input{
+.contact-input{
     @extend .form-basic;
     height: 50px;
 }
 
-.textarea{
+.contact-textarea{
     @extend .form-basic;
     height: 150px;
 }

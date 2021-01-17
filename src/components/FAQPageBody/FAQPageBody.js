@@ -1,16 +1,12 @@
 import React, {Component} from 'react';
-
 import Item from '../FAQPageItem/FAQPageItem';
 import PharmacyContainer from '../FAQPageQuestions/FAQPagePharmacyContainer';
 import ShopContainer from '../FAQPageQuestions/FAQPageShopContainer';
-
-import '../../assets/sass/components/FAQPageBody/_faqPageBody.scss';
-import '../../assets/sass/base/_itemOpacity.scss';
-
 import Pharmacy from '../../assets/img/pharmacy_icon.svg';
 import Shop from '../../assets/img/shop_icon.svg';
 import Visit from '../../assets/img/visit_icon.svg';
 import Reserve from '../../assets/img/reserve_icon.svg';
+import '../../assets/sass/components/FAQPageBody/_faqPageBody.scss';
 
 class FAQPageBody extends Component{
     state = {
@@ -20,13 +16,11 @@ class FAQPageBody extends Component{
 
     pharmacyToggle = () => {
         const doesPharmacyShow = this.state.showPharmacy;
-        this.setState({showPharmacy: !doesPharmacyShow});
-        this.setState({showShop: false});
+        this.setState({showPharmacy: !doesPharmacyShow, showShop: false});
     }
     shopToggle = () => {
         const doesShopShow = this.state.showShop;
-        this.setState({showShop: !doesShopShow});
-        this.setState({showPharmacy: false});
+        this.setState({showShop: !doesShopShow, showPharmacy: false});
     }
 
     render(){
@@ -59,17 +53,17 @@ class FAQPageBody extends Component{
                 <div>
                     <h4 className="faq_header">سوال شما درباره کدام سرویس هست؟</h4>
                     <div className="faq-items-container">
-                        <div className={pharmacyClass} onClick = {this.pharmacyToggle}>
-                            <Item title = "داروخانه" img = {Pharmacy}  />
+                        <div className={pharmacyClass} onClick={this.pharmacyToggle}>
+                            <Item title="داروخانه" img ={Pharmacy}  />
                         </div>
-                        <div className={shopClass} onClick = {this.shopToggle}>
-                            <Item title = "فروشگاه" img = {Shop}  />
-                        </div>
-                        <div className="opacityBlur">
-                            <Item  title = "ویزیت آنلاین" img = {Visit} >به زودی</Item>
+                        <div className={shopClass} onClick={this.shopToggle}>
+                            <Item title="فروشگاه" img ={Shop}  />
                         </div>
                         <div className="opacityBlur">
-                            <Item  title = "رزرو آنلاین" img = {Reserve} >به زودی</Item>     
+                            <Item  title="ویزیت آنلاین" img={Visit} >به زودی</Item>
+                        </div>
+                        <div className="opacityBlur">
+                            <Item  title="رزرو آنلاین" img={Reserve} >به زودی</Item>     
                         </div>
                     </div>
 

@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Logo from '../UI/Logo';
 import DownloadBtn from './DownloadBtn';
-
 import '../../assets/sass/components/Navbar/_navbar.scss';
 
 

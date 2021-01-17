@@ -1,11 +1,11 @@
 import React from 'react';
-import '../../assets/sass/components/RegistryPageServices/_registryPageService.scss';
+import '../../assets/sass/components/AboutPageServices/_aboutPageService.scss';
 
-const registryService = (props) => {
+const aboutService = (props) => {
     return(
-        <div className="registry-service_body">
+        <div className="about-service_body">
             <img src={props.img} />
-            <div className="registry-service_info">
+            <div className="about-service_info">
                 <h4>{props.title}</h4>
                 <p>{props.children}</p>
                 <div><button>ثبت نام</button></div>
@@ -14,4 +14,4 @@ const registryService = (props) => {
     );
 }
 
-export default registryService;
+export default aboutService;

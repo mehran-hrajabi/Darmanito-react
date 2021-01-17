@@ -5,7 +5,7 @@ const faqItem = (props) => {
     return (
         <div className="faq-item">
             <span className="faq-item_badge">{props.children}</span>
-            <img src = {props.img} />
+            <img src={props.img} />
             <span className="faq-item_title">{props.title}</span>
         </div>
     );

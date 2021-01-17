@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../assets/sass/components/RegistryPageStats/_registryPageStats.scss';
+import '../../assets/sass/components/AboutPageStats/_aboutPageStats.scss';
 
-const registryStats = () => {
+const aboutStats = () => {
     return(
-        <div className="registry-stats">
+        <div className="about-stats">
             <div>
                 <p>تعداد کاربران درمانیتو</p>
                 <h1>120,000+</h1>
@@ -20,4 +20,4 @@ const registryStats = () => {
     );
 }
 
-export default registryStats;
+export default aboutStats;

@@ -93,8 +93,7 @@ class ContactForm extends Component {
             emailPhoneInput.value = "";
             messageInput.value = "";
         }
-        this.setState({contactForm: submittedForm});
-        this.setState({showFeedback: true});
+        this.setState({contactForm: submittedForm, showFeedback: true});
     }
 
     render(){

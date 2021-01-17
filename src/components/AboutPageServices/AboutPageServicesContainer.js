@@ -1,14 +1,12 @@
 import React from 'react';
-
-import Service from './RegistryPageService';
-import '../../assets/sass/components/RegistryPageServices/_registryPageServicesContainer.scss';
-
 import Pharmacy from '../../assets/img/pharmacy.svg';
 import Cosmetics from '../../assets/img/shop.svg';
+import Service from './AboutPageService';
+import '../../assets/sass/components/AboutPageServices/_aboutPageServicesContainer.scss';
 
 const servicesContainer = () => {
     return(
-        <div className="registry-services_container">
+        <div className="about-services_container">
             <h4>در درمانیتو چه خدماتی ارائه خواهید داد؟</h4>
             <p>خدمت مورد نظر خود را برای ثبت نام انتخاب کنید.</p>
             <div>
@@ -19,7 +17,6 @@ const servicesContainer = () => {
                 مایل هستم فقط به عنوان فروشگاه آرایشی و بهداشتی فعالیت کنم و نیاز مشتریان در این زمینه را برطرف کنم .
                 </Service>                
             </div>
-
         </div>
     );
 }

@@ -1,6 +1,6 @@
 @import "../../base/base";
 
-.registry-card{
+.about-card{
     @include flex(row, center, initial);
     background-color: white;
     padding: 20px;
@@ -10,7 +10,7 @@
         margin-left: 15px;
     }
 }
-.registry-card_body{
+.about-card_body{
     @include flex(column, flex-start, initial);
     > div{@include flex(row, center, initial);}
     p{margin: 0;}

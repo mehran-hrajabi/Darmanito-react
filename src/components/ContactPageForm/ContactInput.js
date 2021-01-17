@@ -1,25 +1,24 @@
 import React from 'react';
 import '../../assets/sass/components/ContactPageForm/_contactFormInput.scss';
 
-
 const input = (props) => {
     let inputElement = null;
 
     switch (props.elementType) {
         case('input') :
-            inputElement = <input className="input"
+            inputElement = <input className="contact-input"
             {...props.elementConfig}
             value = {props.value}
             onChange = {props.changed} />
             break;
         case('textarea') :
-            inputElement = <textarea className="textarea"
+            inputElement = <textarea className="contact-textarea"
             {...props.elementConfig}
             value = {props.value}
             onChange = {props.changed} />
             break;
         default :
-            inputElement = <input className="input"
+            inputElement = <input className="contact-input"
             {...props.elementConfig}
             value = {props.value}
             onChange = {props.changed} />

@@ -1,9 +1,9 @@
 import React from 'react';
 import Marker from '../../assets/img/map_marker.svg';
-import '../../assets/sass/components/RegistryPageCards/_registryPageCard.scss';
+import '../../assets/sass/components/AboutPageCards/_aboutPageCard.scss';
 
-const registryCard = (props) => {
-    let classes = ['registry-card'];
+const aboutCard = (props) => {
+    let classes = ['about-card'];
     let badge = null;
 
     if(props.isBig){
@@ -26,7 +26,7 @@ const registryCard = (props) => {
     return(
         <div className={classes.join(' ')}>
             <img src={props.children} />
-            <div className="registry-card_body">
+            <div className="about-card_body">
                 <h4>{props.title}</h4>
                 <div>
                     <img src={Marker} />
@@ -38,4 +38,4 @@ const registryCard = (props) => {
     );
 }
 
-export default registryCard;
+export default aboutCard;

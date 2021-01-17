@@ -21,7 +21,7 @@ const FAQPagePharmacyContainer = () => {
             <Question question={pharmacyQuestions[2]} answer={pharmacyAnswers[2]}></Question>
             <Question question={pharmacyQuestions[3]} answer={pharmacyAnswers[3]}></Question>                
         </div>                
-        );
+    );
 
     return <div>{pharmacyContainer}</div> ;
 }

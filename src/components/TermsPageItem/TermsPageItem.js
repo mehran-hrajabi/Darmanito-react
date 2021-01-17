@@ -1,5 +1,4 @@
 import React from 'react';
-
 import '../../assets/sass/components/TermsPageItem/_termsPageItem.scss';
 
 const termsItem = (props) => {

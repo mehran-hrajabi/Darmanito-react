@@ -14,12 +14,11 @@ class FAQPageQuestion extends Component{
     }
 
     render(){
-        
         let answer = null;
-        let minusPlus = <img onClick = {this.answerToggle} src = {Plus} /> ;
+        let minusPlus = <img onClick={this.answerToggle} src={Plus} /> ;
         if(this.state.showAnswer){
             answer = <p>{this.props.answer}</p> ;
-            minusPlus = <img onClick = {this.answerToggle} src = {Minus} /> ;
+            minusPlus = <img onClick={this.answerToggle} src={Minus} /> ;
         }
 
         return (

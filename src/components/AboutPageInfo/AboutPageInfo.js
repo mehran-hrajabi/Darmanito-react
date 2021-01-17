@@ -2,9 +2,9 @@ import React from 'react';
 import RegistryInput from '../UI/RegistryInput';
 import Modal from '../UI/Modal';
 import homeRegistry from '../HomePageRegistry/HomePageRegistry';
-import '../../assets/sass/components/RegistryPageInfo/_registryPageInfo.scss';
+import '../../assets/sass/components/AboutPageInfo/_aboutPageInfo.scss';
 
-class registryInfo extends homeRegistry {
+class aboutInfo extends homeRegistry {
     render(){
         let modal = null;
 
@@ -18,7 +18,7 @@ class registryInfo extends homeRegistry {
         }
 
         return(
-            <div className="registry-info">
+            <div className="about-info">
                 {modal}
                 <h1>شما هم در سلامت و بهبود مردم کشورمون موثر باشید.</h1>
                 <p>با ثبت نام به عنوان داروخانه یا فروشگاه و داروخانه شما هم به سیستم درمان کمک کنید
@@ -30,4 +30,4 @@ class registryInfo extends homeRegistry {
     }
 }
 
-export default registryInfo;
+export default aboutInfo;

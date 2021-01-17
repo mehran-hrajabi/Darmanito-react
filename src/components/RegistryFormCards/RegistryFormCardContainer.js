@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../RegistryPageCards/RegistryPageCard';
+import Card from '../AboutPageCards/AboutPageCard';
 import '../../assets/sass/components/RegistryFormCardContainer/_registryFormCardContainer.scss';
 
 const registryFormCards = (props) => {

@@ -1,17 +1,12 @@
 import React, {Component} from 'react';
-
 import Item from '../TermsPageItem/TermsPageItem';
 import Terms from './TermsDescription';
-
 import '../../assets/sass/components/TermsPageBody/_termsPageBody.scss' ;
-import '../../assets/sass/base/_itemOpacity.scss';
 
 class TermsBody extends Component {
-
     state = {
         showTerms: [true, false, false, false],
     }
-    
     
     termsToggle = (index) => {
         let doesTermShow = [];
@@ -20,7 +15,6 @@ class TermsBody extends Component {
         for(var i=0; i<4; i++){
             doesTermShow[i] = this.state.showTerms[i];
         }
-
         for(i=0; i<4; i++){
             if(i == index){
                 doesTermShow[i] = !currentState;
@@ -29,12 +23,10 @@ class TermsBody extends Component {
                 doesTermShow[i] = false;
             }
         }
-  
         this.setState({showTerms: doesTermShow});
     }
 
     render(){
-
         let terms = null;
         let classes = ["opacityBlur", "opacityBlur", "opacityBlur", "opacityBlur"];
         if(this.state.showTerms[0]) {

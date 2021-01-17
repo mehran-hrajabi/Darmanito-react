@@ -37,8 +37,8 @@ const homeAbout = () => {
                     </div>
                 </div>
             </div>
-    </div>
-    )
-};
+        </div>
+    );
+}
 
 export default homeAbout;

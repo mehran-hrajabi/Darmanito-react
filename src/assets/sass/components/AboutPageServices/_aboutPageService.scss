@@ -1,6 +1,6 @@
 @import "../../base/base";
 
-.registry-service_body{
+.about-service_body{
     @include flex(column, center, space-between);
     margin: 50px;
     border: none;
@@ -30,19 +30,19 @@
         &:hover{opacity: 0.8;}
     }
 }
-.registry-service_info{>div{@include flex(row, center, center);}}
+.about-service_info{>div{@include flex(row, center, center);}}
 
 
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    .registry-service_body{
+    .about-service_body{
         margin: 50px 20px;
     }
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .registry-service_body{
+    .about-service_body{
         margin: 25px;
         width: 300px;
         height: 500px;
@@ -54,7 +54,7 @@
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    .registry-service_body{
+    .about-service_body{
         margin: 10px;
         width: 300px;
         height: 500px;

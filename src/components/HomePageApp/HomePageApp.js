@@ -1,14 +1,11 @@
 import React from "react";
 import Modal from '../UI/Modal';
 import homeRegistry from "../HomePageRegistry/HomePageRegistry";
-
-import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
-
 import download from '../../assets/img/download_badge.svg';
 import bazaar from '../../assets/img/bluebazaar_badge.svg';
 import sib from '../../assets/img/bluesib_badge.svg';
 import phone from '../../assets/img/app_phone.svg';
-
+import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
 
 class homeApp extends homeRegistry {
     render(){

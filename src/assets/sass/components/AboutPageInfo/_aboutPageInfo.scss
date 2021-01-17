@@ -1,6 +1,6 @@
 @import "../../base/base";
 
-.registry-info{
+.about-info{
     @include flex(column, flex-start, initial);
     margin: 50px 0 50px 0;
     width: 60%;
@@ -16,14 +16,14 @@
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    .registry-info{
+    .about-info{
         width: 55%;
         button{margin-right: -90px;}
     }
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .registry-info{
+    .about-info{
         width: 100%;
         h1{font-size: $header3;}
         p{font-size: $text2;}
@@ -32,7 +32,7 @@
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    .registry-info{
+    .about-info{
         width: 100%;
         padding: 0 30px;
         h1{font-size: $header3;}

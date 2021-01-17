@@ -1,7 +1,7 @@
 @import "../../base/base";
 
 h1, p{margin: 0;}
-.registry-stats{
+.about-stats{
     @include flex(row, center, space-between);
     background-color: $primary-color;
     color: white;
@@ -18,14 +18,14 @@ h1, p{margin: 0;}
 
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .registry-stats{
+    .about-stats{
         p{font-size: $text2;}
         h1{font-size: $header2;}
     }
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
-    .registry-stats{
+    .about-stats{
         @include flex(column, center, center);
         > div{
             &:first-child{margin-right: 0;}
