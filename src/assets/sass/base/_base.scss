@@ -24,7 +24,13 @@ a:hover, a:active, a.active{color: $secondary-color;}
 a, a:hover{text-decoration: none;}
 
 /*All headings*/
-h1, h2, h3, h4, h5{font-weight: bold;}
+h1, h2, h3, h4, h5, h6{font-weight: bold;}
+h1{font-size: $header1;}
+h2{font-size: $header2;}
+h3{font-size: $main-header;}
+h4{font-size: $header3;}
+h5{font-size: $text1;}
+h6{font-size: $text2;}
 
 /*All buttons and inputs*/
 button, input{
@@ -53,3 +59,4 @@ label{
     opacity: 0.3;
     &:hover{opacity: 1;}
 }
+.blur{opacity: 0.7;}

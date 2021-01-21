@@ -8,9 +8,9 @@
 .footer_info{
     @include flex(column, initial, initial);
     width: 35%;
-    > h3{
-        font-size: $text2;
+    > h6{
         padding-top: 20px;
+        margin: 0;
     }
     > p{font-size: $text2;}
 }
@@ -73,7 +73,7 @@
         padding: 20px 25px;
         .footer_info{
             width: 40%;
-            > h3{font-size: $text3;}
+            > h6{font-size: $text3;}
             > p{font-size: $text3;}
             .footer_icons{
                 padding-top: 0;

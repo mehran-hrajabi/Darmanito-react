@@ -18,10 +18,7 @@ h4, p{margin: 0;}
         height: 50%;
         margin-bottom: 10px;
     }
-    h4{
-        font-size: $header3;
-        color: $modal-title;
-    }
+    h4{color: $modal-title;}
     p{font-size: $text1;}
     > button{
         @include flex(initial, center, center);

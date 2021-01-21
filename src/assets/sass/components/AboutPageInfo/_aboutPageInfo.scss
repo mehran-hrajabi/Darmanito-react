@@ -4,10 +4,7 @@
     @include flex(column, flex-start, initial);
     margin: 50px 0 50px 0;
     width: 60%;
-    h1{
-        color: $secondary-color;
-        font-size: $header2;
-    }
+    h2{color: $secondary-color;}
     p{font-size: $text1;}
     button{margin-right: -80px;}
 }

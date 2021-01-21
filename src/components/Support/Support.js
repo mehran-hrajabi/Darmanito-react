@@ -6,7 +6,7 @@ const support = () => {
     return (
         <div className="support">
             <div>
-                <h2>پشتیبانی درمانیتو</h2>
+                <h4>پشتیبانی درمانیتو</h4>
                 <p>پاسخگویی در روزهای کاری از 9 صبح تا 9 شب</p>
             </div>
             <div>

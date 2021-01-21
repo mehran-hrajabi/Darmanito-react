@@ -8,7 +8,7 @@ const logo = () => {
         <div className="darmanito_logo">
             <Link to="/"><img src={Darmanito} /></Link>
             <div>
-                <h3>درمانیتو</h3>
+                <h4>درمانیتو</h4>
                 <p>همراه شما در درمان</p>
             </div>
         </div>

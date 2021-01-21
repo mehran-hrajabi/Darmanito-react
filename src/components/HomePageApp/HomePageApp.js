@@ -24,7 +24,7 @@ class homeApp extends homeRegistry {
 
                 <div className="home-app">
                     <div className="home-app_body">
-                        <h1>دانلود اپلیکیشن درمانیتو</h1>
+                        <h3>دانلود اپلیکیشن درمانیتو</h3>
                         <p>برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
                         <div>
                             <input onChange={this.phoneValidation} type="text"

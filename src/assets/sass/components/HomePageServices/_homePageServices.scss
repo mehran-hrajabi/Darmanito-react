@@ -4,8 +4,7 @@
     @include flex(column, initial, initial);
     padding: 25px 100px;
     margin: auto;
-    > h2{
-        font-size: $header3;
+    > h4{
         color: $title-color;
         margin-right: 30px;
     }
@@ -93,7 +92,7 @@
         margin: auto;
         width: 100%;
         padding:0 100px;
-        >h2{text-align: center;}
+        >h4{text-align: center;}
     }
     .home-service_body{@include flex(column, initial,initial);}
     .home-service_items{
@@ -121,7 +120,7 @@
     .home-service{
         padding: 0;
         margin: auto;
-        >h2{
+        >h4{
             font-size: $text1;
             padding-right: 70px;
         }
@@ -145,4 +144,5 @@
     }
     #step1{bottom: 60%;}
     #step2{bottom: 35%;}
-    #step3{bottom: 10%;}}
+    #step3{bottom: 10%;}
+}

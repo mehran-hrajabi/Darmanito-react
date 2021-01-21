@@ -6,11 +6,8 @@
     @include flex(column, initial, initial);
     padding: 200px 100px;
     > div{@include flex(row, initial, initial);}
-    > h1{
-        color: $secondary-color;
-        font-size: $header1;
-    }
-    >p {font-size: $text1;}
+    > h1{color: $secondary-color;}
+    > p{font-size: $text1;}
 }
 
 .home-btn_basic{

@@ -4,7 +4,6 @@
     @include flex(column, initial, center);
     margin: 20px 50px;
     > h4{
-        font-size: $header3;
         color: $title-color;
         padding-right: 120px;
     }

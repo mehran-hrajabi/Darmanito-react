@@ -9,10 +9,7 @@
     @include flex(column, initial, initial);
     width: 50%;
     padding: 50px 100px;
-    > h4{
-        font-size: $text1;
-        padding-bottom: 50px;
-    }
+    > h5{padding-bottom: 50px;}
 }
 
 .register-btn{
@@ -46,6 +43,6 @@
     .registry-form_container{@include flex(column-reverse, initial, initial);}
     .registry-form{
         width: 100%;
-        >h4{display: none;}
+        >h5{display: none;}
     }
 }

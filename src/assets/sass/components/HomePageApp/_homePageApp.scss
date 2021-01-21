@@ -13,8 +13,8 @@
 .home-app_body{
     @include flex(column, initial, initial);
     margin-top: 120px;
-    > h1, p, button, span{color: white;}
-    >h1{font-size: $main-header;}
+    > h3, p, button, span{color: white;}
+    >h3{font-size: $main-header;}
     p{font-size: $text1;}
     input{
         width: 500px;
@@ -67,7 +67,7 @@
     .home-app_body{
         padding: 0 50px 0 0;
         margin-top: 30px;
-        h1{font-size: $header3;}
+        h3{font-size: $header3;}
         p, input, button{font-size: $text3;}
         input{
             width:350px;
@@ -98,15 +98,16 @@
         width:100%; 
         margin: auto; 
         padding-top:25px;
-        >h1, >p{text-align: center;}
-        > h1{font-size: $text1;}
+        >h3, >p{text-align: center;}
+        > h3{font-size: $text1;}
         > p, input{font-size: $text3;}
         input{
             width: 350px;
             height: 55px;
             margin-bottom: 10px;
         }
-        button{width: 85px;
+        button{
+            width: 85px;
             height: 35px;
             margin: 40px -90px 0 0;
         }

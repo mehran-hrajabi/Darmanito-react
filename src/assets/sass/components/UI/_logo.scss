@@ -8,7 +8,7 @@
         margin-left: 10px;
     }
     div{@include flex(column, initial, center);}
-    h3{font-size: 18px;}
+    h4{font-size: 18px;}//Exception
     p{font-size: $text3;}
-    h3,p{margin: 0;}
+    h4,p{margin: 0;}
 }

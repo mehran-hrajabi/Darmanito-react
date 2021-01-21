@@ -10,7 +10,7 @@ import '../../assets/sass/components/HomePageServices/_homePageServices.scss';
 const homeServices = () => {
     return (
         <div className="home-service">
-            <h2>امکانات درمانیتو</h2>
+            <h4>امکانات درمانیتو</h4>
 
             <div className="home-service_body">
                 <div className="home-service_items">

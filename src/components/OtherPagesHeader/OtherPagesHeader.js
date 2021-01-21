@@ -4,7 +4,7 @@ import '../../assets/sass/components/OtherPagesHeader/_otherPagesHeader.scss';
 const pagesHeader = (props) => {
     return (
         <div className="pages-header">
-            <h1>{props.title}</h1>
+            <h2>{props.title}</h2>
         </div>
     );
 }

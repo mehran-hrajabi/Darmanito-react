@@ -233,7 +233,7 @@ class RegistryFormOne extends Component {
 
         let form = (
             <form className="registry-form">
-                <h4>عضویت به عنوان داروخانه</h4>
+                <h5>عضویت به عنوان داروخانه</h5>
                 {formElementsArray.map(formElement => (
                     <Input 
                         key = {formElement.id}
@@ -250,7 +250,7 @@ class RegistryFormOne extends Component {
         );
         let form2 = (
             <form className="registry-form">
-                <h4>عضویت به عنوان داروخانه</h4>
+                <h5>عضویت به عنوان داروخانه</h5>
                 {form2ElementsArray.map(formElement => (
                     <Input 
                         key = {formElement.id}
