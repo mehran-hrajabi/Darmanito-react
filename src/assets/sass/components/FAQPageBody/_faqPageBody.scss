@@ -2,7 +2,7 @@
 
 .faq-body{
     @include flex(column, center, initial);
-    margin: 0 50px;
+    margin: 20px 50px;
     h4{
         color: $title-color;
         padding-right: 50px;

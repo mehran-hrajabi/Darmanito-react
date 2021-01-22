@@ -25,17 +25,17 @@
 
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .home-grid{grid-template-rows: 100px 350px 400px 1000px 350px 400px 130px 200px;}
+    .home-grid{grid-template-rows: 100px 350px 400px 1000px 350px 500px 130px 200px;}
     .faq-grid{grid-template-rows: 100px 100px 900px 100px 200px;}
-    .about-grid{grid-template-rows: 100px 750px 100px 700px 100px 200px;}
+    .about-grid{grid-template-rows: 100px 900px 100px 700px 100px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 800px 100px 200px;}
     .contact-grid{grid-template-rows: 100px 100px 1300px 100px 200px;}
-    .form-grid{grid-template-rows: 100px 1200px;}
+    .form-grid{grid-template-rows: 100px 1100px;}
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
 @media only screen and (max-width: 768px) {
     .home-grid{grid-template-rows: 80px 800px 600px 1100px 850px 900px 170px 200px;}
-    .faq-grid{grid-template-rows: 100px 100px 950px 170px 200px;}
+    .faq-grid{grid-template-rows: 100px 100px 800px 170px 200px;}
     .about-grid{grid-template-rows: 100px 600px 300px 1300px 170px 200px;}
     .terms-grid{grid-template-rows: 100px 100px 850px 170px 200px;}
     .contact-grid{grid-template-rows: 100px 100px 1200px 170px 200px;}

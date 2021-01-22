@@ -14,13 +14,15 @@ class FAQPageBody extends Component{
         showShop : false
     }
 
-    pharmacyToggle = () => {
-        const doesPharmacyShow = this.state.showPharmacy;
-        this.setState({showPharmacy: !doesPharmacyShow, showShop: false});
-    }
-    shopToggle = () => {
-        const doesShopShow = this.state.showShop;
-        this.setState({showShop: !doesShopShow, showPharmacy: false});
+    itemToggle = (item) => {
+        if(item=="pharmacy"){
+            const doesPharmacyShow = this.state.showPharmacy;
+            this.setState({showPharmacy: !doesPharmacyShow, showShop: false});            
+        }
+        else if(item=="shop"){
+            const doesShopShow = this.state.showShop;
+            this.setState({showShop: !doesShopShow, showPharmacy: false});            
+        }
     }
 
     render(){
@@ -53,17 +55,17 @@ class FAQPageBody extends Component{
                 <div>
                     <h4 className="faq_header">سوال شما درباره کدام سرویس هست؟</h4>
                     <div className="faq-items-container">
-                        <div className={pharmacyClass} onClick={this.pharmacyToggle}>
+                        <div className={pharmacyClass} onClick={() => this.itemToggle("pharmacy")}>
                             <Item title="داروخانه" img ={Pharmacy}  />
                         </div>
-                        <div className={shopClass} onClick={this.shopToggle}>
+                        <div className={shopClass} onClick={() => this.itemToggle("shop")}>
                             <Item title="فروشگاه" img ={Shop}  />
                         </div>
                         <div className="opacityBlur">
-                            <Item  title="ویزیت آنلاین" img={Visit} >به زودی</Item>
+                            <Item  title="ویزیت آنلاین" img={Visit}>به زودی</Item>
                         </div>
                         <div className="opacityBlur">
-                            <Item  title="رزرو آنلاین" img={Reserve} >به زودی</Item>     
+                            <Item  title="رزرو آنلاین" img={Reserve}>به زودی</Item>     
                         </div>
                     </div>
 

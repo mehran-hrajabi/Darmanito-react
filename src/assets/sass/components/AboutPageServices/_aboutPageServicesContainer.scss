@@ -4,10 +4,7 @@
     @include flex(column, flex-start, flex-start);
     margin: 50px;
     padding: 50px;
-    > h4{
-        color: $title-color;
-        padding-right: 30px;
-    }
+    > h4{color: $title-color;}
     p{font-size: $text1;}
     > div{
         @include flex(row, center, center);

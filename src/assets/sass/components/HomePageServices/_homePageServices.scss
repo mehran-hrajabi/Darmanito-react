@@ -10,9 +10,7 @@
     }
 }
 
-.home-service_body{
-    @include flex(row, initial, initial);
-}
+.home-service_body{@include flex(row, initial, initial);}
 .home-service_items{
     @include flex(column, initial, initial);
     width: 40%;
@@ -21,13 +19,11 @@
 .home-service_items_container{
     position: relative;
     margin: 15px;
-    opacity: 0.3;
     cursor: pointer;
     img{
         border-radius: 25px;
         box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);
     }
-    &:hover{opacity: 1;}
     span {
         text-align: center;
         position: absolute;
@@ -55,6 +51,7 @@
 }
 
 .home-service_steps{
+    padding-top: 30px;
     position: relative;
     .home-step_title{padding-right: 50px;}
     .home-step_description{padding-right: 100px;}
@@ -63,16 +60,16 @@
     position: absolute;
     border: 1px solid $black;
     height: 60%;
-    top: 12%;
+    top: 20%;
     right: 2.3%;
 }
 #step1, #step2, #step3{
     position: absolute;
     right: 0;
 }
-#step1{bottom: 83.5%;}
-#step2{bottom: 52%;}
-#step3{bottom: 20%;}
+#step1{bottom: 73%;}
+#step2{bottom: 43%;}
+#step3{bottom: 13%;}
 
 
 
@@ -83,8 +80,8 @@
     .home-service_items_container{margin: 5px;}
     .home-step_description{font-size: $text2;}
     #vertical_line{right: 3%;}
-    #step1{bottom: 82%;}
-    #step2{bottom: 50%;}
+    #step1{bottom: 70%;}
+    #step2{bottom: 42%;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -139,10 +136,10 @@
     .home-service_steps{padding-top: 50px;}
     .home-step_title{font-size: $text2;}
     #vertical_line{
-        top: 23%;
+        top: 24%;
         right: 3%;
     }
     #step1{bottom: 60%;}
-    #step2{bottom: 35%;}
+    #step2{bottom: 33.5%;}
     #step3{bottom: 10%;}
 }

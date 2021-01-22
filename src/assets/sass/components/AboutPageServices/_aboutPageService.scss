@@ -16,6 +16,7 @@
         height: 160px;
     }
     button{
+        margin-top: 10px;
         border-radius: 10px;
         color: white;
         background-color: $secondary-color;
@@ -33,9 +34,7 @@
 
 /*Large devices (Smaller laptops/desktops, 992px-1200px)*/
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    .about-service_body{
-        margin: 50px 20px;
-    }
+    .about-service_body{margin: 50px 20px;}
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
 @media only screen and (min-width: 768px) and (max-width: 992px) {

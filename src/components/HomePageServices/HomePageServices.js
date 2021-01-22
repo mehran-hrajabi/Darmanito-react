@@ -15,22 +15,22 @@ const homeServices = () => {
             <div className="home-service_body">
                 <div className="home-service_items">
                     <div>
-                        <div className="home-service_items_container" id="active">
+                        <div className="home-service_items_container opacityBlur" id="active">
                             <img src={pharmacy} alt="داروخانه" />
                             <span>داروخانه</span>
                         </div>
-                        <div className="home-service_items_container">
+                        <div className="home-service_items_container opacityBlur">
                             <img src={shop} alt="فروشگاه" />
                             <span>فروشگاه</span>
                         </div>
                     </div>
 
                     <div>
-                        <div className="home-service_items_container">
+                        <div className="home-service_items_container opacityBlur">
                             <img src={visit} alt="ویزیت آنلاین" />
                             <span id="alignment_exception1">ویزیت آنلاین</span>
                         </div>
-                        <div className="home-service_items_container">
+                        <div className="home-service_items_container opacityBlur">
                             <img src={reserve} alt="رزرو آنلاین" />
                             <span id="alignment_exception2">نوبت دهی آنلاین</span>
                         </div>    

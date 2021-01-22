@@ -277,7 +277,7 @@ class RegistryFormOne extends Component {
             submit = {this.submit}
             back = {this.buttonHandler} />
         );
-        let success = <div className="registry-form"><p>ثبت نام با موفقیت انجام شد</p></div>
+        let success = <div className="registry-form"><p>ثبت نام با موفقیت انجام شد.</p></div>
         
         //Multi step form
         let body = form;

@@ -1,6 +1,6 @@
 @import "../../base/base";
 
-h1, p{margin: 0;}
+
 .about-stats{
     @include flex(row, center, space-between);
     background-color: $primary-color;
@@ -11,6 +11,7 @@ h1, p{margin: 0;}
         &:last-child{margin-left: 100px;}
     }
     p{font-size: $text1;}
+    h1, p{margin: 0;}
 }
 
 
