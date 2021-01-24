@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../AboutPageCards/AboutPageCard';
-import '../../assets/sass/components/RegistryFormCardContainer/_registryFormCardContainer.scss';
+import Card from '../AboutPageCards/AboutPageCard/AboutPageCard';
+import '../../assets/sass/components/RegistryFormCards/_registryFormCardContainer.scss';
 
 const registryFormCards = (props) => {
     return(

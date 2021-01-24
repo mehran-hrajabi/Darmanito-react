@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import RegistryInput from '../UI/RegistryInput';
-import Modal from '../UI/Modal';
+import RegistryInput from '../UI/RegistryInput/RegistryInput';
+import Modal from '../UI/Modal/Modal';
 import doctor from '../../assets/img/register.svg';
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
 
 class homeRegistry extends Component {
     state = {
         showModal: false,
-        isValid : false
+        isValid: false,
     }
 
     phoneValidation = (event) => {

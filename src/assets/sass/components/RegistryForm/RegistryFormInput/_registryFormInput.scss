@@ -1,0 +1,64 @@
+@import "../../../base/base";
+
+.registry-form_input{@include flex(column, initial, initial);}
+
+.input-basic{
+    width: 360px;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    border: 1px solid $placeholder-color;
+}
+
+.valid-input{
+    @extend .input-basic;
+    &:focus{
+        border-color: $input-focus;
+        box-shadow:0 0 0 2px rgba(0,123,255,.25);
+    }
+}
+.invalid-input{
+    @extend .input-basic;
+    &:focus{
+        border-color: $error;
+        box-shadow:0 0 0 1px rgb(255,0,0,.25);
+    }
+}
+
+
+
+.registry-form_region{
+    border: 1px solid $placeholder-color;
+    width: 50px;
+    height: 40px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+select{
+    @extend .input-basic;
+    cursor: pointer;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.registry-form_radio{
+    @include flex(row, initial, initial);
+    > div{
+        border: 2px solid $input-focus;
+        border-radius: 10px;
+        margin: 0 0 0 10px;
+        padding: 5px;
+        width: 100px;
+        height: 40px;
+    }
+    input{cursor: pointer;}
+}
+
+
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .input-basic{
+        width: 290px;
+        height: 45px;
+    }
+}

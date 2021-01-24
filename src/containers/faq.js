@@ -1,6 +1,6 @@
 import React from 'react';
 import '../assets/sass/base/_gridContainers.scss';
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from '../components/Navbar/Navbar/Navbar';
 import Header from '../components/OtherPagesHeader/OtherPagesHeader';
 import Body from '../components/FAQPageBody/FAQPageBody';
 import Support from '../components/Support/Support';

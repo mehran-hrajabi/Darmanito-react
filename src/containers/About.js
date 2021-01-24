@@ -1,9 +1,9 @@
 import React from 'react';
 import '../assets/sass/base/_gridContainers.scss';
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from '../components/Navbar/Navbar/Navbar';
 import Header from '../components/AboutPageHeader/AboutPageHeader';
 import Stats from '../components/AboutPageStats/AboutPageStats';
-import Services from '../components/AboutPageServices/AboutPageServicesContainer';
+import Services from '../components/AboutPageServices/AboutPageServicesContainer/AboutPageServicesContainer';
 import Support from '../components/Support/Support';
 import Footer from '../components/Footer/Footer';
 

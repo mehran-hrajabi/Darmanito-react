@@ -1,6 +1,6 @@
 import React from 'react';
-import RegistryInput from '../UI/RegistryInput';
-import Modal from '../UI/Modal';
+import RegistryInput from '../UI/RegistryInput/RegistryInput';
+import Modal from '../UI/Modal/Modal';
 import homeRegistry from '../HomePageRegistry/HomePageRegistry';
 import '../../assets/sass/components/AboutPageInfo/_aboutPageInfo.scss';
 

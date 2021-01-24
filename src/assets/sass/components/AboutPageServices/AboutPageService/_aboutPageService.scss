@@ -1,0 +1,58 @@
+@import "../../../base/base";
+
+.about-service_body{
+    @include flex(column, center, space-between);
+    margin: 50px;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgb(24, 148, 255, 0.16);
+    width: 450px;
+    height: 500px;
+    padding: 30px;
+    h4{color: $title-color;}
+    img{
+        margin: auto;
+        width: 140px;
+        height: 160px;
+    }
+    button{
+        margin-top: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: $secondary-color;
+        font-size: $text1;
+        width: 170px;
+        height: 50px;
+        border: none;
+        outline: none;
+        &:hover{opacity: 0.8;}
+    }
+}
+.about-service_info{>div{@include flex(row, center, center);}}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .about-service_body{margin: 50px 20px;}
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .about-service_body{
+        margin: 25px;
+        width: 300px;
+        height: 500px;
+        button{
+            width: 110px;
+            height: 35px;
+        }
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .about-service_body{
+        margin: 10px;
+        width: 300px;
+        height: 500px;
+    }
+}

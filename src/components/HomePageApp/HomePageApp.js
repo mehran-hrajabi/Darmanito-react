@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from '../UI/Modal';
+import Modal from '../UI/Modal/Modal';
 import homeRegistry from "../HomePageRegistry/HomePageRegistry";
 import download from '../../assets/img/download_badge.svg';
 import bazaar from '../../assets/img/bluebazaar_badge.svg';
@@ -27,7 +27,7 @@ class homeApp extends homeRegistry {
                         <h3>دانلود اپلیکیشن درمانیتو</h3>
                         <p>برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
                         <div>
-                            <input onChange={this.phoneValidation} type="text"
+                            <input onChange={this.phoneValidation} type="number"
                             placeholder="شماره همراه را وارد کنید 900 36 61 0912" />
                             <button onClick={this.showModal} disabled={!this.state.isValid} type="button">
                                 بفرست

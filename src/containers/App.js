@@ -7,7 +7,7 @@ import Registry from './Registry';
 import Contact from'./Contact';
 import About from './About';
 import Terms from './Terms';
-import ScrollToTop from '../components/UI/ScrollToTop';
+import ScrollToTop from '../components/UI/ScrollToTop/ScrollToTop';
 
 function App() {
   return(

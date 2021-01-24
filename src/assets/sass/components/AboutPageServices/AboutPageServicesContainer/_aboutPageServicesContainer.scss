@@ -1,0 +1,42 @@
+@import "../../../base/base";
+
+.about-services_container{
+    @include flex(column, flex-start, flex-start);
+    margin: 50px;
+    padding: 50px;
+    > h4{color: $title-color;}
+    p{font-size: $text1;}
+    > div{
+        @include flex(row, center, center);
+        margin: auto;
+    }
+}
+
+
+
+/*Large devices (Smaller laptops/desktops, 992px-1200px)*/
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .about-services_container{
+        margin:20px;
+        padding: 30px;
+    }
+}
+/*Medium devices (landscape tablets, 768px-992px)*/
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .about-services_container{
+        margin:0;
+        padding: 20px;
+        > h4{font-size: $text1;}
+        p{font-size: $text2;}
+    }
+}
+/*Small devices (portrait tablets and large phones, 600px-768px)*/
+@media only screen and (max-width: 768px) {
+    .about-services_container{
+        margin:0;
+        padding: 10px;
+        > h4{font-size: $text1;}
+        p{font-size: $text3;}
+        > div{@include flex(column, center, center);}
+    }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import Logo from '../UI/Logo';
+import Logo from '../UI/Logo/Logo';
 import bazaar from '../../assets/img/bazaar_badge.svg';
 import sib from '../../assets/img/sib_badge.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,10 +25,10 @@ const footer = () => {
 
             <div className="footer_links">
                 <p>خدمات درمانیتو</p>
-                <NavLink to="/online-pharmacy" exact>داروخانه آنلاین</NavLink>
-                <NavLink to="/online-shop" exact>فروشگاه آنلاین</NavLink>
-                <NavLink to="/online-visit" exact>ویزیت آنلاین</NavLink>
-                <NavLink to="/medical-case" exact>پرونده پزشکی</NavLink>
+                <a href="/">داروخانه آنلاین</a>
+                <a href="/">فروشگاه آنلاین</a>
+                <a href="/">ویزیت آنلاین</a>
+                <a href="/">پرونده پزشکی</a>
             </div>
 
             <div className="footer_links">

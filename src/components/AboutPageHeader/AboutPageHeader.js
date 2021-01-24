@@ -1,6 +1,6 @@
 import React from 'react';
 import Info from '../AboutPageInfo/AboutPageInfo';
-import Cards from '../AboutPageCards/AboutPageCardContainer';
+import Cards from '../AboutPageCards/AboutPageCardContainer/AboutPageCardContainer';
 import '../../assets/sass/components/AboutPageHeader/_aboutPageHeader.scss';
 
 const aboutHeader = () => {

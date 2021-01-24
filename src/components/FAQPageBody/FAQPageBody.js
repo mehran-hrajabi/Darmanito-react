@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Item from '../FAQPageItem/FAQPageItem';
-import PharmacyContainer from '../FAQPageQuestions/FAQPagePharmacyContainer';
-import ShopContainer from '../FAQPageQuestions/FAQPageShopContainer';
+import PharmacyContainer from '../FAQPageQuestions/FAQPagePharmacyContainer/FAQPagePharmacyContainer';
+import ShopContainer from '../FAQPageQuestions/FAQPageShopContainer/FAQPageShopContainer';
 import Pharmacy from '../../assets/img/pharmacy_icon.svg';
 import Shop from '../../assets/img/shop_icon.svg';
 import Visit from '../../assets/img/visit_icon.svg';
