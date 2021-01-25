@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/sass/components/ContactPageForm/ContactFormInput/_contactFormInput.scss';
 
-const input = (props) => {
+const Input = (props) => {
     let inputElement = null;
 
     switch (props.elementType) {
@@ -32,4 +32,4 @@ const input = (props) => {
     )
 } 
 
-export default input;
+export default Input;

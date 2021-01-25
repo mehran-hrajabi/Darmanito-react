@@ -1,14 +1,14 @@
 import React from 'react';
 import '../../assets/sass/components/FAQPageItem/_faqPageItem.scss';
 
-const faqItem = (props) => {
+const FaqItem = (props) => {
     return (
         <div className="faq-item">
             <span className="faq-item_badge">{props.children}</span>
-            <img src={props.img} />
+            <img src={props.img} alt={props.alt} />
             <span className="faq-item_title">{props.title}</span>
         </div>
     );
 }
 
-export default faqItem;
+export default FaqItem;

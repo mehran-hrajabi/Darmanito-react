@@ -1,15 +1,15 @@
 import React from 'react';
-import phone from '../../assets/img/about_phone.svg';
-import tic from '../../assets/img/tic_icon.svg';
-import efficient from '../../assets/img/efficient_icon.svg';
-import easy from '../../assets/img/easy_icon.svg';
-import search from '../../assets/img/search_icon.svg';
+import Phone from '../../assets/img/about_phone.svg';
+import Tic from '../../assets/img/tic_icon.svg';
+import Efficient from '../../assets/img/efficient_icon.svg';
+import Easy from '../../assets/img/easy_icon.svg';
+import Search from '../../assets/img/search_icon.svg';
 import '../../assets/sass/components/HomePageAbout/_homePageAbout.scss';
 
-const homeAbout = () => {
+const HomeAbout = () => {
     return (
         <div className="home-about">
-            <img src={phone} alt="درباره درمانیتو" />
+            <img src={Phone} alt="درباره درمانیتو" />
 
             <div className="home-about_body">
                 <div className="home-about_txt">
@@ -20,19 +20,19 @@ const homeAbout = () => {
 
                 <div className="home-about_items">
                     <div>
-                        <img src={tic} alt="جستجوی سریغ" />
+                        <img src={Tic} alt="جستجوی سریغ" />
                         <p>جستجوی سریع</p>
                     </div>
                     <div>
-                        <img src={efficient} alt="به صرفه" />
+                        <img src={Efficient} alt="به صرفه" />
                         <p>به صرفه</p>
                     </div>
                     <div>
-                        <img src={easy} alt="راحت" />
+                        <img src={Easy} alt="راحت" />
                         <p>راحت</p>
                     </div>
                     <div>
-                        <img src={search} alt="جستجوی سریع" />
+                        <img src={Search} alt="جستجوی سریع" />
                         <p>جستجوی سریع</p>
                     </div>
                 </div>
@@ -41,4 +41,4 @@ const homeAbout = () => {
     );
 }
 
-export default homeAbout;
+export default HomeAbout;

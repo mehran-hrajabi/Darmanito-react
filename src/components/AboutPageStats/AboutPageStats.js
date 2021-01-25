@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/sass/components/AboutPageStats/_aboutPageStats.scss';
 
-const aboutStats = () => {
+const AboutStats = () => {
     return(
         <div className="about-stats">
             <div>
@@ -20,4 +20,4 @@ const aboutStats = () => {
     );
 }
 
-export default aboutStats;
+export default AboutStats;

@@ -9,16 +9,17 @@ class FAQPageQuestion extends Component{
     }
 
     answerToggle = () => {
-        const doesAnswerShow = this.state.showAnswer;
-        this.setState({showAnswer: !doesAnswerShow});
+        this.setState(state => ({
+            showAnswer: !state.showAnswer
+        }));
     }
 
     render(){
         let answer = null;
-        let minusPlus = <img onClick={this.answerToggle} src={Plus} /> ;
+        let minusPlus = <img onClick={this.answerToggle} src={Plus} alt="نمایش"/> ;
         if(this.state.showAnswer){
             answer = <p>{this.props.answer}</p> ;
-            minusPlus = <img onClick={this.answerToggle} src={Minus} /> ;
+            minusPlus = <img onClick={this.answerToggle} src={Minus} alt="پنهان" /> ;
         }
 
         return (

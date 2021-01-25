@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/sass/components/RegistryForm/RegistryResult/_registryResult.scss';
 
-const result = (props) => {
+const Result = (props) => {
     return(
         <div className="registry-result">
             <div className="result-row1">
@@ -50,4 +50,4 @@ const result = (props) => {
     );
 }
 
-export default result;
+export default Result;

@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../AboutPageCards/AboutPageCard/AboutPageCard';
 import '../../assets/sass/components/RegistryFormCards/_registryFormCardContainer.scss';
 
-const registryFormCards = (props) => {
+const RegistryFormCards = (props) => {
     return(
         <div className="registry-form-cards bg-color">
             <Card isBig={true} isBlur={false} badge={true} title={props.title} name={props.name}>
@@ -18,4 +18,4 @@ const registryFormCards = (props) => {
     );
 }
 
-export default registryFormCards;
+export default RegistryFormCards;

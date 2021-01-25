@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/sass/components/TermsPageItem/_termsPageItem.scss';
 
-const termsItem = (props) => {
+const TermsItem = (props) => {
     return (
         <div className="terms-item">
             <span>{props.title}</span>
@@ -9,4 +9,4 @@ const termsItem = (props) => {
     );
 }
 
-export default termsItem;
+export default TermsItem;

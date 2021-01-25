@@ -4,7 +4,7 @@ import Modal from '../UI/Modal/Modal';
 import homeRegistry from '../HomePageRegistry/HomePageRegistry';
 import '../../assets/sass/components/AboutPageInfo/_aboutPageInfo.scss';
 
-class aboutInfo extends homeRegistry {
+class AboutInfo extends homeRegistry {
     render(){
         let modal = null;
 
@@ -30,4 +30,4 @@ class aboutInfo extends homeRegistry {
     }
 }
 
-export default aboutInfo;
+export default AboutInfo;

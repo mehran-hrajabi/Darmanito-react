@@ -1,13 +1,13 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Logo from '../UI/Logo/Logo';
-import bazaar from '../../assets/img/bazaar_badge.svg';
-import sib from '../../assets/img/sib_badge.svg';
+import Bazaar from '../../assets/img/bazaar_badge.svg';
+import Sib from '../../assets/img/sib_badge.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import '../../assets/sass/components/Footer/_footer.scss';
 
-const footer = () => {
+const Footer = () => {
     return (
         <div className="footer">
             <div className="footer_info">
@@ -43,12 +43,12 @@ const footer = () => {
                 <p>دانلود درمانیتو</p>
 
                 <div>
-                    <a href="#"><img src={bazaar} /></a>
-                    <a href="#"><img src={sib} /></a>
+                    <a href="#"><img src={Bazaar} alt="اپلیکیشن بازار"/></a>
+                    <a href="#"><img src={Sib} alt="اپلیکیشن سیب" /></a>
                 </div>
             </div>
     </div>
     );
 };
 
-export default footer;
+export default Footer;

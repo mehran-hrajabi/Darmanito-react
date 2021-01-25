@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import RegistryInput from '../UI/RegistryInput/RegistryInput';
 import Modal from '../UI/Modal/Modal';
-import doctor from '../../assets/img/register.svg';
+import Doctor from '../../assets/img/register.svg';
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
 
-class homeRegistry extends Component {
+class HomeRegistry extends Component {
     state = {
         showModal: false,
         isValid: false,
@@ -53,7 +53,7 @@ class homeRegistry extends Component {
                         <RegistryInput clicked={this.showModal} isValid={this.state.isValid} validation={this.phoneValidation} />
                     </div>
 
-                    <img src={doctor} alt="عضویت در درمانیتو" />
+                    <img src={Doctor} alt="عضویت در درمانیتو" />
                 </div>                
             </div>
 
@@ -61,4 +61,4 @@ class homeRegistry extends Component {
     }
 };
 
-export default homeRegistry;
+export default HomeRegistry;

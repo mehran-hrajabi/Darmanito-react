@@ -3,7 +3,7 @@ import Info from '../AboutPageInfo/AboutPageInfo';
 import Cards from '../AboutPageCards/AboutPageCardContainer/AboutPageCardContainer';
 import '../../assets/sass/components/AboutPageHeader/_aboutPageHeader.scss';
 
-const aboutHeader = () => {
+const AboutHeader = () => {
     return(
         <div className="about-header">
             <Info />
@@ -12,4 +12,4 @@ const aboutHeader = () => {
     );
 }
 
-export default aboutHeader;
+export default AboutHeader;

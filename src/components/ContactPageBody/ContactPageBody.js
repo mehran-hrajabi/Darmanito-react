@@ -3,7 +3,7 @@ import Address from '../ContactPageAddress/ContactPageAddress';
 import Form from '../ContactPageForm/ContactPageForm/ContactPageForm';
 import '../../assets/sass/components/ContactPageBody/_contactPageBody.scss';
 
-const contactBody = () => {
+const ContactBody = () => {
     return (
         <div className="contact-body">
             <Form />
@@ -12,4 +12,4 @@ const contactBody = () => {
     );
 }
 
-export default contactBody;
+export default ContactBody;

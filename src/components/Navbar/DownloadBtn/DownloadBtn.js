@@ -1,6 +1,6 @@
 import React from 'react';
 
-const downloadBtn = () => {
+const DownloadBtn = () => {
     return (
         <div className="main-nav_btn">
             <button type="button">دانلود درمانیتو</button>
@@ -8,4 +8,4 @@ const downloadBtn = () => {
     )
 };
 
-export default downloadBtn;
+export default DownloadBtn;

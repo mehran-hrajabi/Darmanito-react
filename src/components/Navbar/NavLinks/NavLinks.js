@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-const navLinks = () => {
+const NavLinks = () => {
     return (
         <div className="main-nav_menu">
             <NavLink to="/" exact>صفحه اصلی</NavLink>
@@ -12,4 +12,4 @@ const navLinks = () => {
     )
 };
 
-export default navLinks;
+export default NavLinks;

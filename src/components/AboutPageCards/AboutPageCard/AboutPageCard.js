@@ -2,7 +2,7 @@ import React from 'react';
 import Marker from '../../../assets/img/map_marker.svg';
 import '../../../assets/sass/components/AboutPageCards/AboutPageCard/_aboutPageCard.scss';
 
-const aboutCard = (props) => {
+const AboutCard = (props) => {
     let classes = ['about-card'];
     let badge = null;
 
@@ -25,11 +25,11 @@ const aboutCard = (props) => {
 
     return(
         <div className={classes.join(' ')}>
-            <img src={props.children} />
+            <img src={props.children} alt="آواتار"/>
             <div className="about-card_body">
                 <h4>{props.title}</h4>
                 <div>
-                    <img src={Marker} />
+                    <img src={Marker} alt="مکان" />
                     <p>درمانیتو ، سرویس داروخانه ، داروخانه {props.name}</p>
                 </div>   
             </div>
@@ -38,4 +38,4 @@ const aboutCard = (props) => {
     );
 }
 
-export default aboutCard;
+export default AboutCard;

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/sass/components/RegistryForm/RegistryFormInput/_registryFormInput.scss';
 
-const input = (props) => {
+const Input = (props) => {
     let inputElement = null;
     let inputClass = "invalid-input";
 
@@ -59,4 +59,4 @@ const input = (props) => {
     return <div>{inputElement}</div> ;
 } 
 
-export default input;
+export default Input;

@@ -3,7 +3,7 @@ import Card from '../AboutPageCard/AboutPageCard';
 import Person from '../../../assets/img/person_icon.svg';
 import '../../../assets/sass/components/AboutPageCards/AboutPageCardContainer/_aboutPageCardContainer.scss';
 
-const aboutCards = () => {
+const AboutCards = () => {
     let cardInfo = ['نام داروخانه شما', 'شما'];
     return(
         <div className="about-card_container">
@@ -20,4 +20,4 @@ const aboutCards = () => {
     );
 }
 
-export default aboutCards;
+export default AboutCards;

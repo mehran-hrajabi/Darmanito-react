@@ -4,8 +4,7 @@ import Logo from '../../UI/Logo/Logo';
 import DownloadBtn from '../DownloadBtn/DownloadBtn';
 import '../../../assets/sass/components/Navbar/_navbar.scss';
 
-
-const hamburgerMenu = (props) =>{
+const HamburgerMenu = (props) =>{
     return(
         <div className="hamburger_menu">
             <div className="menu_logo">
@@ -28,4 +27,4 @@ const hamburgerMenu = (props) =>{
     );
 }
 
-export default hamburgerMenu;
+export default HamburgerMenu;

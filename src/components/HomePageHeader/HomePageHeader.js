@@ -1,8 +1,8 @@
 import React from 'react';
-import doctor from '../../assets/img/header_doctor.svg';
+import Doctor from '../../assets/img/header_doctor.svg';
 import '../../assets/sass/components/HomePageHeader/_homePageHeader.scss';
 
-const homeHeader = () => {
+const HomeHeader = () => {
     return(
         <div className="home-header">
             <div className="home-header_appDl">
@@ -14,9 +14,9 @@ const homeHeader = () => {
                 </div>
             </div>
 
-            <img src={doctor} alt="Doctor" />
+            <img src={Doctor} alt="" />
         </div>
     )
 };
 
-export default homeHeader;
+export default HomeHeader;

@@ -1,13 +1,13 @@
 import React from 'react';
-import pharmacy from '../../assets/img/pharmacy_icon.svg';
-import shop from '../../assets/img/shop_icon.svg';
-import visit from '../../assets/img/visit_icon.svg';
-import reserve from '../../assets/img/reserve_icon.svg';
-import arrow from '../../assets/img/arrow.svg';
-import done from '../../assets/img/done_icon.svg';
+import Pharmacy from '../../assets/img/pharmacy_icon.svg';
+import Shop from '../../assets/img/shop_icon.svg';
+import Visit from '../../assets/img/visit_icon.svg';
+import Reserve from '../../assets/img/reserve_icon.svg';
+import Arrow from '../../assets/img/arrow.svg';
+import Done from '../../assets/img/done_icon.svg';
 import '../../assets/sass/components/HomePageServices/_homePageServices.scss';
 
-const homeServices = () => {
+const HomeServices = () => {
     return (
         <div className="home-service">
             <h4>امکانات درمانیتو</h4>
@@ -16,22 +16,22 @@ const homeServices = () => {
                 <div className="home-service_items">
                     <div>
                         <div className="home-service_items_container opacityBlur" id="active">
-                            <img src={pharmacy} alt="داروخانه" />
+                            <img src={Pharmacy} alt="داروخانه" />
                             <span>داروخانه</span>
                         </div>
                         <div className="home-service_items_container opacityBlur">
-                            <img src={shop} alt="فروشگاه" />
+                            <img src={Shop} alt="فروشگاه" />
                             <span>فروشگاه</span>
                         </div>
                     </div>
 
                     <div>
                         <div className="home-service_items_container opacityBlur">
-                            <img src={visit} alt="ویزیت آنلاین" />
+                            <img src={Visit} alt="ویزیت آنلاین" />
                             <span id="alignment_exception1">ویزیت آنلاین</span>
                         </div>
                         <div className="home-service_items_container opacityBlur">
-                            <img src={reserve} alt="رزرو آنلاین" />
+                            <img src={Reserve} alt="رزرو آنلاین" />
                             <span id="alignment_exception2">نوبت دهی آنلاین</span>
                         </div>    
                     </div>
@@ -46,15 +46,15 @@ const homeServices = () => {
                     <div className="home-service_steps">
                         <div id="vertical_line"></div>
 
-                        <img id="step1" src={arrow} />
+                        <img id="step1" src={Arrow} alt="" />
                         <p className="home-step_title">قدم اول</p>
                         <p className="home-step_description">وارد بخش سفارش با عکس نسخه شوید و عکس و توضیحات را وارد کنید.</p>
 
-                        <img id="step2" src={arrow} />
+                        <img id="step2" src={Arrow} alt="" />
                         <p className="home-step_title">قدم دوم</p>
                         <p className="home-step_description">بعد از ارسال عکس نسخه، باید آدرس محل خودتون رو وارد کنید.</p>
 
-                        <img id="step3" src={done} />
+                        <img id="step3" src={Done} alt="" />
                         <p className="home-step_title">قدم سوم</p>
                         <p className="home-step_description">اگر نتیجه جستجوی نسخه موفقیت آمیز باشه باید منتظر تحویل سفارش باشید.</p>
                     </div>
@@ -64,4 +64,4 @@ const homeServices = () => {
     )
 };
 
-export default homeServices;
+export default HomeServices;

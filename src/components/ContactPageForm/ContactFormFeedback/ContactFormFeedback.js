@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../assets/sass/components/ContactPageForm/ContactFormFeedback/_contactFormFeedback.scss';
 
-const feedback = (props) => {
+const Feedback = (props) => {
     let feedbackMessage = null;
     let feedbackClass = "hide";
 
@@ -29,4 +29,4 @@ const feedback = (props) => {
     );
 }
 
-export default feedback;
+export default Feedback;

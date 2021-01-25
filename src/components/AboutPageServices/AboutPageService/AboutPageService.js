@@ -1,10 +1,10 @@
 import React from 'react';
 import '../../../assets/sass/components/AboutPageServices/AboutPageService/_aboutPageService.scss';
 
-const aboutService = (props) => {
+const AboutService = (props) => {
     return(
         <div className="about-service_body">
-            <img src={props.img} />
+            <img src={props.img} alt={props.alt} />
             <div className="about-service_info">
                 <h4>{props.title}</h4>
                 <p>{props.children}</p>
@@ -14,4 +14,4 @@ const aboutService = (props) => {
     );
 }
 
-export default aboutService;
+export default AboutService;

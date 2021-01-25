@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/sass/components/ContactPageAddress/_contactPageAddress.scss';
 
-const contactAddress = () => {
+const ContactAddress = () => {
     return (
         <div className="contact-address">
             <iframe frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"
@@ -24,4 +24,4 @@ const contactAddress = () => {
     );
 }
 
-export default contactAddress;
+export default ContactAddress;

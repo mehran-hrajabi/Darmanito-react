@@ -1,13 +1,13 @@
 import React from "react";
 import Modal from '../UI/Modal/Modal';
-import homeRegistry from "../HomePageRegistry/HomePageRegistry";
-import download from '../../assets/img/download_badge.svg';
-import bazaar from '../../assets/img/bluebazaar_badge.svg';
-import sib from '../../assets/img/bluesib_badge.svg';
-import phone from '../../assets/img/app_phone.svg';
+import HomeRegistry from "../HomePageRegistry/HomePageRegistry";
+import Download from '../../assets/img/download_badge.svg';
+import Bazaar from '../../assets/img/bluebazaar_badge.svg';
+import Sib from '../../assets/img/bluesib_badge.svg';
+import Phone from '../../assets/img/app_phone.svg';
 import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
 
-class homeApp extends homeRegistry {
+class HomeApp extends HomeRegistry {
     render(){
         let modal = null;
         if(this.state.showModal){
@@ -35,14 +35,14 @@ class homeApp extends homeRegistry {
                         </div>
 
                         <div className="home-app_badge">
-                            <a href="#"><img src={download} /></a>
+                            <a href="#"><img src={Download} alt="دانلود درمانیتو" /></a>
                             <span>دانلود مستقیم</span>
-                            <a href="#"><img src={bazaar} /></a>
-                            <a href="#"><img src={sib} /></a>
+                            <a href="#"><img src={Bazaar} alt="دانلود از بازار" /></a>
+                            <a href="#"><img src={Sib} alt="دانلود از سیب" /></a>
                         </div>
                     </div>
 
-                    <img src={phone} alt="دانلود اپلیکیشن درمانیتو" />
+                    <img src={Phone} alt="دانلود اپلیکیشن درمانیتو" />
                 </div>                
             </div>
 
@@ -50,4 +50,4 @@ class homeApp extends homeRegistry {
     }
 };
 
-export default homeApp ;
+export default HomeApp ;
