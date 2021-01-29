@@ -4,19 +4,12 @@ import '../../../assets/sass/components/AboutPageCards/AboutPageCard/_aboutPageC
 
 const AboutCard = (props) => {
     let classes = ['about-card'];
+    if(props.isBig) classes.push('big');
+    else if(!props.isBig) classes.push('small');
+
+    if(props.isBlur) classes.push('blur');
+
     let badge = null;
-
-    if(props.isBig){
-        classes.push('big'); 
-    }
-    else if(!props.isBig){
-        classes.push('small');
-    }
-
-    if(props.isBlur){
-        classes.push('blur');
-    }
-
     if(props.badge){
         badge = (
             <span>شبانه روزی</span>

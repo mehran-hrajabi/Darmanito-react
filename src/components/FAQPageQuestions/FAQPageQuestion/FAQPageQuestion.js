@@ -5,30 +5,38 @@ import '../../../assets/sass/components/FAQPageQuestions/FAQPageQuestion/_faqPag
 
 class FAQPageQuestion extends Component{
     state = {
-        showAnswer: false
+        showAnswer: false,
+        answer: null,
+        img: Plus
     }
 
     answerToggle = () => {
-        this.setState(state => ({
-            showAnswer: !state.showAnswer
-        }));
+        this.setState(state => {
+            if(!state.showAnswer){
+                return {
+                    answer: <p>{this.props.answer}</p>,
+                    img: Minus,
+                    showAnswer: !state.showAnswer
+                };
+            }
+            else if(state.showAnswer){
+                return{
+                    answer: null,
+                    img: Plus,
+                    showAnswer: !state.showAnswer
+                };
+            }
+        });
     }
 
     render(){
-        let answer = null;
-        let minusPlus = <img onClick={this.answerToggle} src={Plus} alt="نمایش"/> ;
-        if(this.state.showAnswer){
-            answer = <p>{this.props.answer}</p> ;
-            minusPlus = <img onClick={this.answerToggle} src={Minus} alt="پنهان" /> ;
-        }
-
         return (
             <div className="faq-question_body">
                 <div className="faq-question">
-                    {minusPlus}
+                    <img onClick={this.answerToggle} src={this.state.img} alt="نمایش"/>
                     <h5>{this.props.question}</h5>
                 </div>
-                {answer}
+                {this.state.answer}
                 <hr />         
             </div>
         );

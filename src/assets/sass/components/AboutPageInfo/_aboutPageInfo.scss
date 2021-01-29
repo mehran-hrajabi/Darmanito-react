@@ -6,7 +6,7 @@
     width: 60%;
     h2{color: $secondary-color;}
     p{font-size: $text1;}
-    button{margin-right: -80px;}
+    .ui-registry-btn{margin-right: -80px;}
 }
 
 
@@ -15,7 +15,7 @@
 @media only screen and (min-width: 992px) and (max-width: 1200px){
     .about-info{
         width: 55%;
-        button{margin-right: -90px;}
+        .ui-registry-btn{margin-right: -90px;}
     }
 }
 /*Medium devices (landscape tablets, 768px-992px)*/
@@ -24,7 +24,7 @@
         width: 100%;
         h1{font-size: $header3;}
         p{font-size: $text2;}
-        button{margin-right: -50px;}
+        .ui-registry-btn{margin-right: -50px;}
     }
 }
 /*Small devices (portrait tablets and large phones, 600px-768px)*/
@@ -40,7 +40,7 @@
             height: 55px;
             padding: 15px;
         }
-        button{
+        .ui-registry-btn{
             margin-right: -100px;
             left: 0;
             font-size: $text3;

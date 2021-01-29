@@ -9,21 +9,28 @@ import '../../../assets/sass/components/Navbar/_navbar.scss';
 
 class Navbar extends Component {
     state = {
-        showMenu: false
+        showMenu: false,
+        hamburgerMenu: null
     }
 
     hamburgerMenuHandler = () => {
-        let doesShow = this.state.showMenu;
-        this.setState({showMenu: !doesShow});
+        this.setState(state => {
+            if(!state.showMenu){
+                return{
+                    hamburgerMenu: <Hamburger><a onClick={this.hamburgerMenuHandler}><img src={Close} alt="بستن"/></a></Hamburger> ,
+                    showMenu: !state.showMenu
+                }
+            }
+            else if(state.showMenu){
+                return{
+                    hamburgerMenu: null,
+                    showMenu: !state.showMenu
+                }
+            }
+        });
     }
-    render(){
-        let hamburgerMenu = null;
-        if(this.state.showMenu){
-            hamburgerMenu = <Hamburger>
-                                <a onClick={this.hamburgerMenuHandler}><img src={Close} alt="بستن"/></a>
-                            </Hamburger>
-        }
 
+    render(){
         return (
             <div className="main-nav">
                 <Logo />
@@ -32,7 +39,7 @@ class Navbar extends Component {
                 <div className="hamburger_icon">
                     <img src={Icon} alt="منوی اصلی" onClick={this.hamburgerMenuHandler} />
                 </div>
-                {hamburgerMenu}
+                {this.state.hamburgerMenu}
             </div>
         );
     }

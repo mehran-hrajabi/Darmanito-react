@@ -38,25 +38,6 @@ class TermsBody extends Component {
                 }));
             break;            
         }
-
-        let terms = null;
-        let classes = ["opacityBlur", "opacityBlur", "opacityBlur", "opacityBlur"];        
-        if(this.state.registryTerms) {
-            terms = Terms.registry;
-            classes = ["opacityOne", "opacityBlur", "opacityBlur", "opacityBlur"];
-        }
-        else if(this.state.pharmacyTerms) {
-            terms = Terms.pharmacy;
-            classes = ["opacityBlur", "opacityOne", "opacityBlur", "opacityBlur"];
-        }
-        else if(this.state.shopTerms) {
-            terms = Terms.shop;
-            classes = ["opacityBlur", "opacityBlur", "opacityOne", "opacityBlur"];
-        }
-        else if(this.state.supportTerms) {
-            terms = Terms.support;
-            classes = ["opacityBlur", "opacityBlur", "opacityBlur", "opacityOne"];
-        }
     }
 
     render(){

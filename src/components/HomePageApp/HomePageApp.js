@@ -1,26 +1,49 @@
-import React from "react";
+import React, {Component} from "react";
 import Modal from '../UI/Modal/Modal';
-import HomeRegistry from "../HomePageRegistry/HomePageRegistry";
 import Download from '../../assets/img/download_badge.svg';
 import Bazaar from '../../assets/img/bluebazaar_badge.svg';
 import Sib from '../../assets/img/bluesib_badge.svg';
 import Phone from '../../assets/img/app_phone.svg';
 import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
 
-class HomeApp extends HomeRegistry {
-    render(){
-        let modal = null;
-        if(this.state.showModal){
-            modal = (
-                <Modal show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
-                    <button onClick={this.closeModal}>برگشت</button>
-                </Modal>
-            );
+class HomeApp extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            showModal: false,
+            isValid: false
         }
+        this.modal = null;
+    }
 
+    phoneValidation = (event) => {
+        let number = event.target.value;
+        if(number.length == 11 && number.slice(1,11) > 9000000000 && number.slice(0,0) == 0){
+            this.setState({isValid: true});
+        }
+        else{
+            this.setState({isValid: false});
+        }
+    }
+    showModal = () => {
+        if(this.state.isValid){
+            this.setState({showModal: true});
+        }
+        this.modal = (
+            <Modal show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
+                <button onClick={this.closeModal}>برگشت</button>
+            </Modal>
+        );
+    }
+    closeModal = () => {
+        this.setState({showModal: false, isValid: false});
+        this.modal = null;
+    }
+
+    render(){
         return (
             <div>
-                {modal}
+                {this.modal}
 
                 <div className="home-app">
                     <div className="home-app_body">

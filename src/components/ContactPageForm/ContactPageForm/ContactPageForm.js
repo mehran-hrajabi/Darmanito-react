@@ -4,6 +4,10 @@ import Feedback from '../ContactFormFeedback/ContactFormFeedback';
 import '../../../assets/sass/components/ContactPageForm/ContactPageForm/_contactPageForm.scss';
 
 class ContactForm extends Component {
+    constructor(props){
+        super(props);
+        this.feedback = null;
+    }
     state = {
         contactForm: {
             name: {
@@ -43,26 +47,30 @@ class ContactForm extends Component {
 
     inputChangedHandler = (event, inputID) => {
         //Handling input changes and update values
-        const updatedForm = {
-            ...this.state.contactForm
-        };
-        const updatedElement = {
-            ...updatedForm[inputID]
-        };
-        updatedElement.value = event.target.value;
-        updatedForm[inputID] = updatedElement;
-        this.setState({contactForm: updatedForm});
+        this.setState(state => {
+            const updatedForm = {
+                ...state.contactForm
+            };
+            const updatedElement = {
+                ...updatedForm[inputID]
+            };
+            updatedElement.value = event.target.value;
+            updatedForm[inputID] = updatedElement;
+            return {
+                contactForm: updatedForm
+            };
+        });
     }
 
     formValidation = () =>{
+        const phonePattern = new RegExp(/^\d+$/);
+        const emailPattern = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
         let submittedForm = {
             ...this.state.contactForm
         };
         let nameInput = submittedForm.name;
         let emailPhoneInput = submittedForm.emailPhone;
         let messageInput = submittedForm.message;
-        const phonePattern = new RegExp(/^\d+$/);
-        const emailPattern = new RegExp(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
 
         //Set default states for validation if user wants to send message again 
         nameInput.valid = false;
@@ -94,6 +102,11 @@ class ContactForm extends Component {
             messageInput.value = "";
         }
         this.setState({contactForm: submittedForm, showFeedback: true});
+        this.feedback = (
+            <Feedback isNameValid={this.state.contactForm.name.valid}
+                        isEmailPhoneValid = {this.state.contactForm.emailPhone.valid}
+                        isMessageValid = {this.state.contactForm.message.valid} />
+        );   
     }
 
     render(){
@@ -120,18 +133,9 @@ class ContactForm extends Component {
             </form>
         );
 
-        let feedback = null;
-        if(this.state.showFeedback){
-            feedback = (
-                <Feedback isNameValid={this.state.contactForm.name.valid}
-                            isEmailPhoneValid = {this.state.contactForm.emailPhone.valid}
-                            isMessageValid = {this.state.contactForm.message.valid} />
-            );            
-        }
-
         return(
             <div className="contact-form">
-                {feedback}
+                {this.feedback}
                 {form}
             </div>
         );

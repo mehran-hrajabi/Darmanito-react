@@ -5,9 +5,13 @@ import Doctor from '../../assets/img/register.svg';
 import "../../assets/sass/components/HomePageRegistry/_homePageRegistry.scss";
 
 class HomeRegistry extends Component {
-    state = {
-        showModal: false,
-        isValid: false,
+    constructor(props){
+        super(props);
+        this.state = {
+            showModal: false,
+            isValid: false
+        }
+        this.modal = null;
     }
 
     phoneValidation = (event) => {
@@ -23,26 +27,21 @@ class HomeRegistry extends Component {
         if(this.state.isValid){
             this.setState({showModal: true});
         }
+        this.modal = (
+            <Modal show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
+                <button onClick={this.closeModal}>برگشت</button>
+            </Modal>
+        );
     }
     closeModal = () => {
         this.setState({showModal: false, isValid: false});
+        this.modal = null;
     }
     
     render(){
-        let modal = null;
-
-        if(this.state.showModal){
-            modal = (
-                <Modal show={this.state.showModal} title="ثبت نام با موفقیت انجام شد"
-                txt="با شما تماس خواهیم گرفت">
-                    <button onClick={this.closeModal}>برگشت</button>
-                </Modal>
-            );
-        }
-
         return (
             <div className="home-register_container">
-                {modal}
+                {this.modal}
 
                 <div className="home-register">
                     <div className="home-register_body">    
