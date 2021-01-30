@@ -8,84 +8,90 @@ class TermsBody extends Component {
         registryTerms:true,
         pharmacyTerms: false,
         shopTerms: false,
-        supportTerms: false
+        supportTerms: false,
+        registryClass:"opacityOne",
+        pharmacyClass: "opacityBlur",
+        shopClass: "opacityBlur",
+        supportClass: "opacityBlur",
+        terms: Terms.registry
     }
     
     termsToggle = (index) => {
         switch(index){
             case("registry"):
-                this.setState(state => ({
-                    registryTerms: !state.registryTerms,
-                    pharmacyTerms: false, shopTerms: false, supportTerms: false
-                }));
+                this.setState(state => {
+                    if(!state.registryTerms){
+                        return{
+                            registryTerms: !state.registryTerms, registryClass: "opacityOne", terms: Terms.registry,
+                            pharmacyTerms: false, shopTerms: false, supportTerms: false,
+                            pharmacyClass: "opacityBlur", shopClass: "opacityBlur", supportClass: "opacityBlur"
+                        };
+                    }
+                });
             break;
             case("pharmacy"):
-                this.setState(state => ({
-                    pharmacyTerms: !state.pharmacyTerms,
-                    registryTerms: false, shopTerms: false, supportTerms: false
-                }));
+                this.setState(state => {
+                    if(!state.pharmacyTerms){
+                        return{
+                            pharmacyTerms: !state.pharmacyTerms, pharmacyClass: "opacityOne", terms: Terms.pharmacy,
+                            registryTerms: false, shopTerms: false, supportTerms: false,
+                            registryClass: "opacityBlur", shopClass: "opacityBlur", supportClass: "opacityBlur"
+                        };
+                    }
+                });
             break;
             case("shop"):
-                this.setState(state => ({
-                    shopTerms: !state.shopTerms,
-                    registryTerms: false, pharmacyTerms: false, supportTerms: false
-                }));
+                this.setState(state => {
+                    if(!state.shopTerms){
+                        return{
+                            shopTerms: !state.shopTerms, shopClass: "opacityOne", terms: Terms.shop,
+                            registryTerms: false, pharmacyTerms: false, supportTerms: false,
+                            registryClass: "opacityBlur", pharmacyClass: "opacityBlur", supportClass: "opacityBlur"
+                        };
+                    }
+                });
             break;
             case("support"):
-                this.setState(state => ({
-                    supportTerms: !state.supportTerms,
-                    registryTerms: false, pharmacyTerms: false, shopTerms: false
-                }));
+                this.setState(state => {
+                    if(!state.supportTerms){
+                        return{
+                            supportTerms: !state.supportTerms, supportClass: "opacityOne", terms: Terms.support,
+                            registryTerms: false, pharmacyTerms: false, shopTerms: false,
+                            registryClass: "opacityBlur", pharmacyClass: "opacityBlur", shopClass: "opacityBlur"
+                        };
+                    }
+                });
             break;            
         }
     }
 
     render(){
-        let terms = null;
-        let classes = ["opacityBlur", "opacityBlur", "opacityBlur", "opacityBlur"];
-        if(this.state.registryTerms) {
-            terms = Terms.registry;
-            classes = ["opacityOne", "opacityBlur", "opacityBlur", "opacityBlur"];
-        }
-        else if(this.state.pharmacyTerms) {
-            terms = Terms.pharmacy;
-            classes = ["opacityBlur", "opacityOne", "opacityBlur", "opacityBlur"];
-        }
-        else if(this.state.shopTerms) {
-            terms = Terms.shop;
-            classes = ["opacityBlur", "opacityBlur", "opacityOne", "opacityBlur"];
-        }
-        else if(this.state.supportTerms) {
-            terms = Terms.support;
-            classes = ["opacityBlur", "opacityBlur", "opacityBlur", "opacityOne"];
-        }
-
         return(
             <div className="terms-body">
                 <h4>کاربران باید این توافق نامه را مطالعه و سپس اقدام به عضویت و ... نمایند</h4>
 
                 <div className="terms-items_container">
                     <div>
-                        <div className={classes[0]} onClick = {() => this.termsToggle("registry")}>
+                        <div className={this.state.registryClass} onClick = {() => this.termsToggle("registry")}>
                             <Item title="قوانین عضویت حساب کاربری" />
                         </div>
-                        <div className={classes[1]} onClick = {() => this.termsToggle("pharmacy")}>
+                        <div className={this.state.pharmacyClass} onClick = {() => this.termsToggle("pharmacy")}>
                             <Item title="قوانین داروخانه" />
                         </div>                        
                     </div>
 
                     <div>
-                        <div className={classes[2]} onClick = {() => this.termsToggle("shop")}>
+                        <div className={this.state.shopClass} onClick = {() => this.termsToggle("shop")}>
                             <Item title="قوانین فروشگاه" />
                         </div>
-                        <div className={classes[3]} onClick = {() => this.termsToggle("support")}>
+                        <div className={this.state.supportClass} onClick = {() => this.termsToggle("support")}>
                             <Item title="قوانین مشاوره آنلاین" />
                         </div>                        
                     </div>
                 </div>
 
                 <div className="terms-toggle">
-                    <p>{terms}</p>
+                    <p>{this.state.terms}</p>
                 </div>
             </div>
         );
