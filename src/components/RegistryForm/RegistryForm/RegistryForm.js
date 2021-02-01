@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect, redirect} from 'react-router'
 import Cards from '../../RegistryFormCards/RegistryFormCardContainer';
 import Input from '../RegistryFormInput/RegistryFormInput';
 import Result from '../RegistryResult/RegistryResult';
@@ -126,7 +127,8 @@ class RegistryFormOne extends Component {
         isForm2Valid: false,
         secondStep: false,
         lastStep: false,
-        successMessage: false
+        successMessage: false,
+        redirect: false
     }
 
     checkValidity = (value, rules) => {
@@ -213,6 +215,7 @@ class RegistryFormOne extends Component {
         let isLastStep = this.state.lastStep;
         let isSuccessful = this.state.successMessage;
         this.setState({secondStep: !isSecondStep, lastStep: !isLastStep, successMessage: !isSuccessful});
+        setTimeout(() => this.setState({ redirect: true }), 5000);
     }
 
     render(){
@@ -295,6 +298,9 @@ class RegistryFormOne extends Component {
             body = success;
             pharmacyName = this.state.registryForm.pharmacyName.value;
             pharmacyName2 = pharmacyName;
+        }
+        if(this.state.redirect){
+            body = <Redirect to="/" />;
         }
 
         return(
