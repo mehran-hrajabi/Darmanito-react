@@ -3,6 +3,7 @@ import { createBrowserHistory } from 'history';
 import Cards from '../../RegistryFormCards/RegistryFormCardContainer';
 import Input from '../RegistryFormInput/RegistryFormInput';
 import Result from '../RegistryResult/RegistryResult';
+import Success from '../RegistrySuccess/RegistrySuccess';
 import Person from '../../../assets/img/person_icon.svg';
 import '../../../assets/sass/components/RegistryForm/RegistryForm/_registryForm.scss';
 
@@ -225,7 +226,7 @@ class RegistryForm extends Component {
             setTimeout(()=>{
                 let history = createBrowserHistory();
                 history.goBack();
-            }, 5000);
+            }, 4000);
         }
     }
 
@@ -304,7 +305,7 @@ class RegistryForm extends Component {
 
         //Success message
         if(this.state.successMessage){
-            this.body = <div className="registry-form"><p>ثبت نام با موفقیت انجام شد.</p></div>;
+            this.body = <Success />;
         }
 
         return(

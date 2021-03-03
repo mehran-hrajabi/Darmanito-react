@@ -1,7 +1,11 @@
 @import "../../../base/base";
 
-.contact-form_input{@include flex(column, initial, inline);}
+.contact-form_input{
+    @include flex(column, initial, inline);
+    label{padding-bottom:5px;}
+}
 .form-basic{
+    padding-right: 10px;
     margin-bottom: 15px;
     width: 450px;
     border-radius: 10px;
