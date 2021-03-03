@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import {Redirect, redirect} from 'react-router'
+import { createBrowserHistory } from 'history';
 import Cards from '../../RegistryFormCards/RegistryFormCardContainer';
 import Input from '../RegistryFormInput/RegistryFormInput';
 import Result from '../RegistryResult/RegistryResult';
 import Person from '../../../assets/img/person_icon.svg';
 import '../../../assets/sass/components/RegistryForm/RegistryForm/_registryForm.scss';
 
-class RegistryFormOne extends Component {
+class RegistryForm extends Component {
+    constructor(props){
+        super(props);
+        this.body = null;
+    }
     state = {
         registryForm: {
             name: {
@@ -128,7 +132,7 @@ class RegistryFormOne extends Component {
         secondStep: false,
         lastStep: false,
         successMessage: false,
-        redirect: false
+        redirect: false,
     }
 
     checkValidity = (value, rules) => {
@@ -152,11 +156,22 @@ class RegistryFormOne extends Component {
         return isValid;
     }
 
-    inputChangedHandler = (event, inputID) => {
-        //Handling input changes and update values
-        const updatedForm = {
-            ...this.state.registryForm
-        };
+    inputChangedHandler = (event, inputID, formID) => {
+        let updatedForm;
+        switch (formID) {
+            case "one":
+                updatedForm = {
+                    ...this.state.registryForm
+                }
+                break;
+            case "two":
+                updatedForm = {
+                    ...this.state.registryForm2
+                }
+                break;
+            default:
+                break;
+        }
         const updatedElement = {
             ...updatedForm[inputID]
         };
@@ -170,146 +185,136 @@ class RegistryFormOne extends Component {
         for(let inputID in updatedForm){
             formValidity = updatedForm[inputID].valid && formValidity;
         }
-        this.setState({registryForm: updatedForm, isFormValid: formValidity});
-    }
-    inputChangedHandler2 = (event, inputID) => {
-        //Handling input changes and update values
-        const updatedForm2 = {
-            ...this.state.registryForm2
-        };
-        const updatedElement2 = {
-            ...updatedForm2[inputID]
-        };
-        updatedElement2.value = event.target.value;
-        //Check input validity
-        updatedElement2.valid = this.checkValidity(updatedElement2.value, updatedElement2.validationRules);
-
-        updatedForm2[inputID] = updatedElement2;
-        //Check overall form validity
-        let formValidity = true;
-        for(let inputID in updatedForm2){
-            formValidity = updatedForm2[inputID].valid && formValidity;
-        }
-        this.setState({registryForm2: updatedForm2, isForm2Valid: formValidity});
+        this.setState(state=>{
+            if(formID==="one"){
+                return {registryForm: updatedForm, isFormValid: formValidity};
+            }
+            else if(formID==="two"){
+                return {registryForm2: updatedForm, isForm2Valid: formValidity};
+            }
+        });
     }
 
-    buttonHandler = () => {
-        let isSecondStep = this.state.secondStep;
-        let isLastStep = this.state.lastStep;
-
-        //Go to step 2
-        if(!isSecondStep && !isLastStep){
-            this.setState({secondStep: !isSecondStep});
-        }
-        //Go to results
-        if(isSecondStep && !isLastStep){
-            this.setState({lastStep: !isLastStep});
-        }
-        //Go back to edit inputs
-        if(isSecondStep && isLastStep){
-            this.setState({secondStep: !isSecondStep, lastStep: !isLastStep});
-        }
+    buttonsHandler = (submit) => {
+        this.setState(state => {
+            //Go to second step
+            if(!state.secondStep && !state.lastStep && !submit){
+                return {secondStep: true}
+            }
+            //Go to last step (Confirmation)
+            else if(state.secondStep && !state.lastStep && !submit){
+                return {lastStep: true, secondStep: false}
+            }
+            //Go back to edit
+            else if(!state.secondStep && state.lastStep && !submit){
+                return {secondStep: false, lastStep: false}
+            }
+            //Submit form
+            else if(submit){
+                return{secondStep: false, lastStep: false, successMessage: true, redirect: true}
+            }
+            else{
+                return state;
+            }
+        });
     }
-    submit = () =>{
-        let isSecondStep = this.state.secondStep;
-        let isLastStep = this.state.lastStep;
-        let isSuccessful = this.state.successMessage;
-        this.setState({secondStep: !isSecondStep, lastStep: !isLastStep, successMessage: !isSuccessful});
-        setTimeout(() => this.setState({ redirect: true }), 5000);
+
+    componentDidUpdate(){
+        //Redirect to home page
+        if(this.state.redirect){
+            setTimeout(()=>{
+                let history = createBrowserHistory();
+                history.goBack();
+            }, 5000);
+        }
     }
 
     render(){
-        let formElementsArray = [];
-        for(let key in this.state.registryForm){
-            formElementsArray.push({
-                id: key,
-                config: this.state.registryForm[key]
-            })
-        }
-        let form2ElementsArray = [];
-        for(let key in this.state.registryForm2){
-            form2ElementsArray.push({
-                id: key,
-                config: this.state.registryForm2[key]
-            })
+        //First step
+        if(!this.state.secondStep && !this.state.lastStep){
+            let formElementsArray = [];
+            for(let key in this.state.registryForm){
+                formElementsArray.push({
+                    id: key,
+                    config: this.state.registryForm[key]
+                });
+            }
+            this.body = (
+                <form className="registry-form">
+                    <h5>عضویت به عنوان داروخانه</h5>
+                    {formElementsArray.map(formElement => (
+                        <Input 
+                            key = {formElement.id}
+                            elementType = {formElement.config.elementType}
+                            elementConfig = {formElement.config.elementConfig}
+                            value = {formElement.config.value}
+                            valid = {formElement.config.valid}
+                            label = {formElement.config.label}
+                            changed = {(event) => this.inputChangedHandler(event, formElement.id, "one")} />
+                    ))}
+                    <button className="register-btn" disabled={!this.state.isFormValid}
+                    onClick={() => this.buttonsHandler(false)} type="button">مرحله بعد</button>
+                </form>
+            );
         }
 
-        let form = (
-            <form className="registry-form">
-                <h5>عضویت به عنوان داروخانه</h5>
-                {formElementsArray.map(formElement => (
-                    <Input 
-                        key = {formElement.id}
-                        elementType = {formElement.config.elementType}
-                        elementConfig = {formElement.config.elementConfig}
-                        value = {formElement.config.value}
-                        valid = {formElement.config.valid}
-                        label = {formElement.config.label}
-                        changed = {(event) => this.inputChangedHandler(event, formElement.id)} />
-                ))}
-                <button className="register-btn" disabled={!this.state.isFormValid}
-                onClick={this.buttonHandler} type="button">مرحله بعد</button>
-            </form>
-        );
-        let form2 = (
-            <form className="registry-form">
-                <h5>عضویت به عنوان داروخانه</h5>
-                {form2ElementsArray.map(formElement => (
-                    <Input 
-                        key = {formElement.id}
-                        elementType = {formElement.config.elementType}
-                        elementConfig = {formElement.config.elementConfig}
-                        value = {formElement.config.value}
-                        valid = {formElement.config.valid}
-                        label = {formElement.config.label}
-                        changed = {(event) => this.inputChangedHandler2(event, formElement.id)} />
-                ))}
-                <button className="register-btn" disabled={!this.state.isForm2Valid}
-                onClick={this.buttonHandler} type="button">تکمیل ثبت نام</button>
-            </form>
-        );
-        let result = (
-            <Result name = {this.state.registryForm.name.value}
-            medNumber = {this.state.registryForm.medicalNumber.value}
-            pharName = {this.state.registryForm.pharmacyName.value}
-            pharNumber = {this.state.registryForm.pharmacyNumber.value}
-            city = {this.state.registryForm2.city.value}
-            region = {this.state.registryForm2.region.value}
-            address = {this.state.registryForm2.address.value}
-            shift = {this.state.registryForm2.shift.value}
-            submit = {this.submit}
-            back = {this.buttonHandler} />
-        );
-        let success = <div className="registry-form"><p>ثبت نام با موفقیت انجام شد.</p></div>
-        
-        //Multi step form
-        let body = form;
-        let pharmacyName = "نام داروخانه شما";
-        let pharmacyName2 = "شما";
+        //Second step
         if(this.state.secondStep){
-            body = form2;
-            pharmacyName = this.state.registryForm.pharmacyName.value;
-            pharmacyName2 = pharmacyName;
+            let form2ElementsArray = [];
+            for(let key in this.state.registryForm2){
+                form2ElementsArray.push({
+                    id: key,
+                    config: this.state.registryForm2[key]
+                });
+            }
+            this.body = (
+                <form className="registry-form">
+                    <h5>عضویت به عنوان داروخانه</h5>
+                    {form2ElementsArray.map(formElement => (
+                        <Input 
+                            key = {formElement.id}
+                            elementType = {formElement.config.elementType}
+                            elementConfig = {formElement.config.elementConfig}
+                            value = {formElement.config.value}
+                            valid = {formElement.config.valid}
+                            label = {formElement.config.label}
+                            changed = {(event) => this.inputChangedHandler(event, formElement.id, "two")} />
+                    ))}
+                    <button className="register-btn" disabled={!this.state.isForm2Valid}
+                    onClick={() => this.buttonsHandler(false)} type="button">تکمیل ثبت نام</button>
+                </form>
+            );
         }
+
+        //Confirmation step
         if(this.state.lastStep){
-            body = result;
+            this.body = (
+                <Result name = {this.state.registryForm.name.value}
+                    medNumber = {this.state.registryForm.medicalNumber.value}
+                    pharName = {this.state.registryForm.pharmacyName.value}
+                    pharNumber = {this.state.registryForm.pharmacyNumber.value}
+                    city = {this.state.registryForm2.city.value}
+                    region = {this.state.registryForm2.region.value}
+                    address = {this.state.registryForm2.address.value}
+                    shift = {this.state.registryForm2.shift.value}
+                    submit = {() => this.buttonsHandler(true)}
+                    back = {() => this.buttonsHandler(false)} />
+            );
         }
+
+        //Success message
         if(this.state.successMessage){
-            body = success;
-            pharmacyName = this.state.registryForm.pharmacyName.value;
-            pharmacyName2 = pharmacyName;
-        }
-        if(this.state.redirect){
-            body = <Redirect to="/" />;
+            this.body = <div className="registry-form"><p>ثبت نام با موفقیت انجام شد.</p></div>;
         }
 
         return(
             <div className="registry-form_container">
-                {body}
-                <Cards title={pharmacyName} name={pharmacyName2}>{Person}</Cards>
+                {this.body}
+                <Cards title={this.state.registryForm.pharmacyName.value}
+                name={this.state.registryForm.pharmacyName.value}>{Person}</Cards>
             </div>
         );
     }
 }
 
-export default RegistryFormOne;
+export default RegistryForm;
