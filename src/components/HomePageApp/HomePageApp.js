@@ -7,13 +7,10 @@ import Phone from '../../assets/img/app_phone.svg';
 import '../../assets/sass/components/HomePageApp/_homePageApp.scss';
 
 class HomeApp extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            showModal: false,
-            isValid: false
-        }
-        this.modal = null;
+    state = {
+        showModal: false,
+        isValid: false,
+        inputText: ""
     }
 
     phoneValidation = (event) => {
@@ -24,33 +21,35 @@ class HomeApp extends Component {
         else{
             this.setState({isValid: false});
         }
+        this.setState({
+            inputText: number
+        });
     }
+
     showModal = () => {
         if(this.state.isValid){
-            this.setState({showModal: true});
+            this.setState({showModal: true, inputText: ""});
         }
-        this.modal = (
-            <Modal show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
-                <button onClick={this.closeModal}>برگشت</button>
-            </Modal>
-        );
     }
     closeModal = () => {
         this.setState({showModal: false, isValid: false});
-        this.modal = null;
     }
 
     render(){
         return (
             <div>
-                {this.modal}
+                {this.state.showModal ? (
+                    <Modal backdropAction={this.closeModal} show={this.state.showModal} title="ارسال موفق" txt="لینک دانلود برای شما ارسال شد.">
+                        <button onClick={this.closeModal}>برگشت</button>
+                    </Modal> 
+                ) : null}
 
                 <div className="home-app">
                     <div className="home-app_body">
                         <h3>دانلود اپلیکیشن درمانیتو</h3>
                         <p>برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.</p>
                         <div>
-                            <input onChange={this.phoneValidation} type="number"
+                            <input value={this.state.inputText} onChange={this.phoneValidation} type="number"
                             placeholder="شماره همراه را وارد کنید 900 36 61 0912" />
                             <button onClick={this.showModal} disabled={!this.state.isValid} type="button">
                                 بفرست

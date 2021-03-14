@@ -4,7 +4,7 @@ h4, p{margin: 0;}
 .modal{
     @include flex(column, center, center);
     position: fixed;
-    z-index: 500;
+    z-index: 2;
     top: 10%;
     right: 30%;
     width: 80%;
